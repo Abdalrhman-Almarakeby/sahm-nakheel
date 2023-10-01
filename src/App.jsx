@@ -1,5 +1,11 @@
+import Header from "./sections/Header";
 import "./CSS/output.css";
 
 export default function App() {
-  return <h1 className="text-red-600">Sahm nakheel</h1>;
+  return (
+    <main className="container">
+      <Header />
+      <section></section>
+    </main>
+  );
 }
