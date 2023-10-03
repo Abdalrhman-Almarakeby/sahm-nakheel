@@ -3,7 +3,7 @@ import SectionTitle from "../components/SectionTitle";
 
 export default function About() {
   return (
-    <section id="about">
+    <section id="about" className="pb-10">
       <SectionTitle description="Maximizing your investment opportunities">
         About us
       </SectionTitle>

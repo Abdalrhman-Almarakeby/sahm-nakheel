@@ -26,7 +26,7 @@ export default function ScrollBtn() {
 
   return (
     <div
-      className="fixed transition duration-700 right-12 bottom-12"
+      className="fixed z-50 transition duration-700 right-12 bottom-12"
       style={btnStyle}
     >
       <button

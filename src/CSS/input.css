@@ -13,14 +13,34 @@
 
 @layer components {
   .section-title {
-    @apply flex flex-col gap-2.5  relative py-20 font-light text-center before:absolute before:text-8xl before:text-[#00263a08];
+    @apply flex flex-col gap-2.5  relative py-20 font-light text-center;
   }
 
   .section-title h3 {
-    @apply text-6xl leading-[90px];
+    @apply text-6xl leading-[90px] relative;
   }
 
+  .section-title span {
+    @apply absolute -translate-x-1/2 left-1/2 top-8 w-full text-8xl text-[#00263a08];
+  }
   .section-title p {
     @apply text-xl;
+  }
+
+  .card-container {
+    @apply grid gap-16 px-10;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .feature-card {
+    @apply flex flex-col items-start gap-5 p-8 rounded-[2.25rem] bg-white shadow-lg;
+  }
+
+  .feature-card h5 {
+    @apply text-xl font-bold;
+  }
+
+  .feature-card p {
+    @apply text-sm font-light text-darkGreen;
   }
 }

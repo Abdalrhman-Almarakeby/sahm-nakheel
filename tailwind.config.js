@@ -14,9 +14,6 @@ export default {
         darkGreen: "#137054",
         darkBlue: "#00263A",
       },
-      fontSize: {
-        md: "0.9375rem",
-      },
     },
   },
   plugins: [],
