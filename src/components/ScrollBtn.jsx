@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import UpArrow from "./assets/icons/up-arrow.svg";
+import UpArrow from "../assets/icons/up-arrow.svg";
 
 export default function ScrollBtn() {
   const [showBtn, setShowBtn] = useState(false);
@@ -26,7 +26,7 @@ export default function ScrollBtn() {
 
   return (
     <div
-      className="fixed transition duration-700 right-12 bottom-20"
+      className="fixed transition duration-700 right-12 bottom-12"
       style={btnStyle}
     >
       <button

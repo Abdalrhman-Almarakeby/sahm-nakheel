@@ -1,11 +1,11 @@
 import playIcon from "../assets/icons/play.svg";
-import palmTreeImg from "../assets/images/Image-1.png";
+import palmTreesImg from "../assets/images/Image-1.png";
 import shadow2 from "../assets/background-shadows/shadow2.svg";
-import ScrollBtn from "../ScrollBtn";
+import ScrollBtn from "../components/ScrollBtn";
 
 export default function Home() {
   return (
-    <section className="flex items-center justify-between text-darkBlue">
+    <section className="flex items-center justify-between" id="home">
       <div className="flex flex-col p-20 gap-7">
         <h3 className="text-xl font-light">
           Start your investment journey with Sahm Nakheel
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
       <img
-        src={palmTreeImg}
+        src={palmTreesImg}
         alt="Three palm trees in a field, representing nature and beauty."
       />
       <ScrollBtn />
