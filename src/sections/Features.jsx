@@ -12,7 +12,7 @@ import shadow3 from "../assets/background-shadows/shadow3.svg";
 
 export default function Features() {
   return (
-    <section className="relative pb-10">
+    <section className="relative flex flex-col gap-16 pb-10">
       <SectionTitle
         description="There is no better asset to own than one that
         increases in value over time & keeps pace with inflation"
