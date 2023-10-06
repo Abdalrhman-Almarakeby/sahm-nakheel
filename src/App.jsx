@@ -7,12 +7,14 @@ import "./CSS/output.css";
 
 export default function App() {
   return (
-    <main className="container">
+    <>
       <Header />
-      <Home />
-      <About />
-      <Features />
-      <HowItIsWork />
-    </main>
+      <main className="container px-2">
+        <Home />
+        <About />
+        <Features />
+        <HowItIsWork />
+      </main>
+    </>
   );
 }

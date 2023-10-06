@@ -13,11 +13,11 @@
 
 @layer components {
   .main-p {
-    @apply text-xl font-light capitalize;
+    @apply text-sm font-light capitalize sm:text-lg md:text-xl;
   }
 
   .main-heading {
-    @apply text-6xl font-light leading-[90px];
+    @apply text-4xl ms:text-5xl sm:text-6xl font-light sm:leading-[90px];
   }
 
   .heading-2 {
@@ -25,7 +25,7 @@
   }
 
   .section-title {
-    @apply flex flex-col gap-2.5 items-center relative py-20 font-light text-center;
+    @apply flex flex-col gap-2.5 items-center relative py-10 ms:py-14 sm:py-20 font-light text-center;
   }
 
   .section-title h3 {
@@ -33,15 +33,33 @@
   }
 
   .section-title span {
-    @apply absolute -translate-x-1/2 left-1/2 top-8 w-full text-8xl text-[#00263a08];
+    @apply absolute -translate-x-1/2 left-1/2 top-4 ms:top-6 sm:top-8 w-full text-5xl ms:text-7xl sm:text-8xl text-[#00263a08];
   }
 
   .card-container {
-    @apply grid gap-16 px-10;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    @apply grid gap-10 ms:px-2 ms:gap-8 sm:px-8 lg:px-20;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
   .feature-card {
-    @apply flex flex-col items-start gap-5 p-8 rounded-[2.25rem] bg-white shadow-lg;
+    @apply border text-center items-center flex flex-col sm:items-start sm:text-left gap-5 py-8 px-3 ms:py-12 rounded-[2.25rem] bg-white shadow-lg sm:px-8 md:px-10;
+  }
+
+  .globe-svg {
+    fill: #00263a;
+  }
+
+  @media (min-width: 1024px) {
+    .globe-svg {
+      fill: #137054;
+    }
+  }
+}
+
+@layer utilities {
+  @media (min-width: 1024px) {
+    ._visible {
+      visibility: visible !important;
+    }
   }
 }

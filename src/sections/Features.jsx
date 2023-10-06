@@ -12,7 +12,7 @@ import shadow3 from "../assets/background-shadows/shadow3.svg";
 
 export default function Features() {
   return (
-    <section className="relative flex flex-col gap-16 pb-10">
+    <section className="relative flex flex-col gap-6 pb-10 ms:gap-10 sm:gap-16">
       <SectionTitle
         description="There is no better asset to own than one that
         increases in value over time & keeps pace with inflation"
@@ -76,7 +76,10 @@ export default function Features() {
           alt="Green wallet icon with two yellow coins on it"
         />
       </div>
-      <img src={shadow3} className="absolute right-14 -top-60 -z-50 blur-3xl" />
+      <img
+        src={shadow3}
+        className="absolute right-14 -top-60 -z-30 blur-3xl lg:top-80"
+      />
     </section>
   );
 }
