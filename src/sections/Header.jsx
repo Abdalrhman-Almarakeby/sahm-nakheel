@@ -37,10 +37,18 @@ export default function Header() {
     });
   }, [menuOpen]);
 
-  const navStyle = {
-    right: menuOpen ? "0" : "-100%",
-    visibility: menuOpen ? "visible" : "hidden",
-  };
+  const navStyle = menuOpen
+    ? {}
+    : {
+        right: "-100%",
+        visibility: "hidden",
+        width: "1px",
+        height: "1px",
+        margin: "-1px",
+        overflow: "hidden",
+        border: "none",
+        clip: "rect(0,0,0,0)",
+      };
 
   return (
     <>
@@ -60,7 +68,7 @@ export default function Header() {
         <nav
           id="menu"
           style={navStyle}
-          className="absolute lg:static lg:px-0 lg:bg-transparent lg:flex-row lg:pt-5 flex _visible bg-lightGreen text-darkBlue md:text-darkGreen px-10 gap-14 md:gap-10 pt-20 duration-150 z-40 top-0 h-[120vh] lg:h-auto  flex-col transition-all items-center  py-5 lg:flex lg:justify-center lg:gap-16 xl:gap-24 text-lg lg:text-base xl:text-lg"
+          className="absolute right-0 lg:static lg:px-0 lg:bg-transparent lg:flex-row lg:pt-5 flex _visible bg-lightGreen text-darkBlue md:text-darkGreen px-10 gap-14 md:gap-10 pt-20 duration-150 z-40 top-0 h-[120vh] lg:h-auto  flex-col transition-all items-center  py-5 lg:flex lg:justify-center lg:gap-16 xl:gap-24 text-lg lg:text-base xl:text-lg"
         >
           <ul className="flex flex-col gap-5 md:gap-6 lg:flex-row lg:gap-4">
             <li>
