@@ -6,13 +6,8 @@
   html {
     @apply scroll-smooth;
   }
-
   body {
     @apply overflow-x-hidden font-Poppins text-darkBlue;
-  }
-
-  img {
-    @apply select-none;
   }
 }
 
