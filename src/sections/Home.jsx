@@ -41,7 +41,10 @@ export default function Home() {
         alt="Three palm trees in a field, representing nature and beauty."
         className="px-5 ms:px-14 sm:px-28 md:px-44 lg:p-0 lg:max-w-md xl:max-w-xl 2xl:max-w-2xl"
       />
-      {/* <img src={shadow2} className="absolute left-7 top-80 -z-40 blur-3xl" /> */}
+      <img
+        src={shadow2}
+        className="absolute left-7 top-80 -z-40 blur-3xl hidden md:block"
+      />
     </section>
   );
 }

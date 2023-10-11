@@ -55,11 +55,3 @@
     }
   }
 }
-
-@layer utilities {
-  @media (min-width: 1024px) {
-    ._visible {
-      visibility: visible !important;
-    }
-  }
-}

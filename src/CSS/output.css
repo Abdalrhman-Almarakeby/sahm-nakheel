@@ -896,10 +896,6 @@ body {
   max-width: 50ch;
 }
 
-.max-w-full {
-  max-width: 100%;
-}
-
 .rotate-\[-15deg\] {
   --tw-rotate: -15deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1106,6 +1102,46 @@ body {
   padding-top: 5rem;
 }
 
+.pb-\[20svh\] {
+  padding-bottom: 20svh;
+}
+
+.pb-\[\] {
+  padding-bottom: ;
+}
+
+.pb-\[clac\(20svh\+2rem\)\] {
+  padding-bottom: clac(20svh+2rem);
+}
+
+.pb-\[calc\(20svh\+2rem\)\] {
+  padding-bottom: calc(20svh + 2rem);
+}
+
+.pb-\[calc\(20svh\+3rem\)\] {
+  padding-bottom: calc(20svh + 3rem);
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pb-\[calc\(20vh\+3rem\)\] {
+  padding-bottom: calc(20vh + 3rem);
+}
+
+.pb-\[calc\(20vh\+2rem\)\] {
+  padding-bottom: calc(20vh + 2rem);
+}
+
 .text-center {
   text-align: center;
 }
@@ -1207,12 +1243,6 @@ body {
 
 .duration-700 {
   transition-duration: 700ms;
-}
-
-@media (min-width: 1024px) {
-  ._visible {
-    visibility: visible !important;
-  }
 }
 
 .before\:absolute::before {
@@ -1335,6 +1365,11 @@ body {
   .ms\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .ms\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .ms\:text-2xl {
@@ -1467,6 +1502,10 @@ body {
     right: 3rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:gap-10 {
     gap: 2.5rem;
   }
@@ -1502,9 +1541,18 @@ body {
     padding-bottom: 0.5rem;
   }
 
+  .md\:pt-20 {
+    padding-top: 5rem;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-darkGreen {
@@ -1624,12 +1672,30 @@ body {
     padding-bottom: 2.5rem;
   }
 
+  .lg\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .lg\:pt-10 {
     padding-top: 2.5rem;
   }
 
   .lg\:pt-5 {
     padding-top: 1.25rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:text-2xl {

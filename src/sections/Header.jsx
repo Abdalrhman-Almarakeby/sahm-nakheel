@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex flex-row items-center justify-between gap-5 px-8 py-4 text-center lg:items-stretch lg:px-6 xl:py-12 lg:justify-start lg:flex-col lg:static lg:py-10 ">
+      <header className="sticky top-0 z-50 flex flex-row items-center justify-between gap-5 px-4 ms:px-8 py-4 text-center lg:items-stretch lg:px-6 xl:py-12 lg:justify-start lg:flex-col lg:static lg:py-10 ">
         <img
           src={Logo}
           alt="Sahm Nakheel Logo"
@@ -60,51 +60,51 @@ export default function Header() {
         <nav
           id="menu"
           style={navStyle}
-          className="absolute lg:static lg:px-0 lg:bg-transparent lg:flex-row lg:pt-5 flex _visible bg-lightGreen text-darkBlue md:text-darkGreen px-10 gap-14 md:gap-10 pt-20 duration-150 z-40 top-0 h-[120vh] lg:h-auto  flex-col transition-all items-center  py-5 lg:flex lg:justify-center lg:gap-16 xl:gap-24 text-lg lg:text-base xl:text-lg"
+          className="absolute lg:static lg:px-0 lg:bg-transparent lg:flex-row lg:pt-5 flex bg-lightGreen text-darkBlue md:text-darkGreen px-10 gap-6 md:gap-10  pt-12 md:pt-20 lg:pb-0 duration-150 z-40 top-0 h-[120vh] lg:h-auto  flex-col transition-all items-center  py-5 lg:flex lg:justify-center lg:gap-16 xl:gap-24 md:text-lg lg:text-base xl:text-lg"
         >
           <ul className="flex flex-col gap-5 md:gap-6 lg:flex-row lg:gap-4">
             <li>
-              <a href="#home" className="px-1 py-3">
+              <a href="#home" className="lg:px-1 lg:py-3">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="px-1 py-3">
+              <a href="#about" className="lg:px-1 lg:py-3">
                 About us
               </a>
             </li>
             <li>
-              <a href="#features" className="px-1 py-3">
+              <a href="#features" className="lg:px-1 lg:py-3">
                 Features
               </a>
             </li>
             <li>
-              <a href="#pricing" className="px-1 py-3">
+              <a href="#pricing" className="lg:px-1 lg:py-3">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#faqs" className="px-1 py-3">
+              <a href="#faqs" className="lg:px-1 lg:py-3">
                 FAQs
               </a>
             </li>
             <li>
-              <a href="#gallery" className="px-1 py-3">
+              <a href="#gallery" className="lg:px-1 lg:py-3">
                 Gallery
               </a>
             </li>
             <li>
-              <a href="#blog" className="px-1 py-3">
+              <a href="#blog" className="lg:px-1 lg:py-3">
                 Blog
               </a>
             </li>
             <li>
-              <a href="#contact" className="px-1 py-3">
+              <a href="#contact" className="lg:px-1 lg:py-3">
                 Contact us
               </a>
             </li>
           </ul>
-          <div className="flex flex-col items-center gap-6 lg:gap-3 lg:flex-row">
+          <div className="flex flex-col items-center gap-3 md:gap-6 lg:gap-3 lg:flex-row">
             <a
               className="px-4 py-1 font-bold text-white rounded-full text-md bg-gradient-to-r from-lightGreen to-darkGreen lg:text-base xl:text-lg"
               href="https://play.google.com"
@@ -118,7 +118,8 @@ export default function Header() {
             >
               Sign in
             </a>
-            <button className="flex items-center gap-3 px-2 lg:px-0 ">
+            <button className="flex items-center gap-3 px-2 py-1 lg:px-0 ">
+              {/* FIXME: replace the svg with an img */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="9"
