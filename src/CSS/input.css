@@ -7,7 +7,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply overflow-x-hidden font-Poppins text-darkBlue;
+    @apply max-w-full overflow-x-hidden font-Poppins text-darkBlue;
   }
 }
 

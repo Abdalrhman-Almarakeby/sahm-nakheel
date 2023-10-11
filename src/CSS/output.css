@@ -439,6 +439,7 @@ html {
 }
 
 body {
+  max-width: 100%;
   overflow-x: hidden;
   font-family:  'Poppins', sans-serif;
   --tw-text-opacity: 1;
@@ -883,6 +884,10 @@ body {
   max-width: 15rem;
 }
 
+.max-w-\[30ch\] {
+  max-width: 30ch;
+}
+
 .max-w-\[45ch\] {
   max-width: 45ch;
 }
@@ -891,8 +896,8 @@ body {
   max-width: 50ch;
 }
 
-.max-w-\[30ch\] {
-  max-width: 30ch;
+.max-w-full {
+  max-width: 100%;
 }
 
 .rotate-\[-15deg\] {
@@ -970,6 +975,10 @@ body {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-full {
@@ -1507,14 +1516,6 @@ body {
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
-  }
-
-  .lg\:-top-20 {
-    top: -5rem;
-  }
-
-  .lg\:top-20 {
-    top: 5rem;
   }
 
   .lg\:top-80 {

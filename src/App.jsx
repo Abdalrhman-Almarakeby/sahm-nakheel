@@ -7,7 +7,7 @@ import "./CSS/output.css";
 
 export default function App() {
   return (
-    <>
+    <div className="overflow-x-hidden max-w-full">
       <Header />
       <main className="container px-2">
         <Home />
@@ -15,6 +15,6 @@ export default function App() {
         <Features />
         <HowItIsWork />
       </main>
-    </>
+    </div>
   );
 }
