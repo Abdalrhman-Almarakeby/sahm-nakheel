@@ -12,14 +12,14 @@ import shadow3 from "../assets/background-shadows/shadow3.svg";
 
 export default function Features() {
   return (
-    <section className="relative flex flex-col gap-6 pb-10 ms:gap-10 sm:gap-16">
+    <section className="relative flex flex-col gap-6 pb-10 ms:gap-10 ms:pt-16 sm:gap-16 lg:gap-0 lg:py-0">
       <SectionTitle
         description="There is no better asset to own than one that
         increases in value over time & keeps pace with inflation"
       >
         Great Features
       </SectionTitle>
-      <div className="card-container">
+      <div className="grid grid-cols-1 gap-6 px-12 ms:grid-cols-2 ms:gap-6 ms:px-2 sm:grid-cols-3 sm:px-8 md:grid-cols-3 lg:gap-7 lg:px-20 xl:grid-cols-4 2xl:grid-cols-5">
         <FeatureCard
           name="Affordable"
           description="As low as just 800 EGP per month/share, Sahm Nakheel offers an accessible investment."
@@ -78,7 +78,7 @@ export default function Features() {
       </div>
       <img
         src={shadow3}
-        className="absolute right-14 -top-60 -z-30 blur-3xl lg:top-80"
+        className="absolute left-0 top-1/3 -z-30 blur-3xl ms:-top-60 ms:right-14 lg:top-[360px] xl:top-24"
       />
     </section>
   );

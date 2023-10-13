@@ -6,52 +6,79 @@
   html {
     @apply scroll-smooth;
   }
+
   body {
     @apply max-w-full overflow-x-hidden font-Poppins text-darkBlue;
+  }
+
+  img,
+  svg {
+    @apply select-none;
   }
 }
 
 @layer components {
+  .btn {
+    @apply rounded-full bg-darkGreen px-1 py-2 text-sm text-white transition duration-300 hover:bg-darkBlue ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl xl:px-12 xl:text-2xl;
+  }
+
+  .border-btn {
+    @apply rounded-full border border-solid border-darkGreen bg-white px-1 py-2 text-sm text-darkGreen transition duration-300 hover:border-darkBlue hover:bg-darkBlue hover:text-white ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-10 lg:text-xl xl:px-12 xl:text-2xl;
+  }
+
+  .light-gradiant-btn {
+    @apply py-1 px-4 text-darkGreen transition rounded-full font-bold bg-gradient-270 from-[#efefef] from-[-3.65%] to-lightGreen to-100% shadow-light;
+  }
+
+  .dark-gradiant-btn {
+    @apply py-1 px-4 text-white rounded-full font-bold bg-gradient-270 duration-300 transition hover:bg-blend-darken  from-darkGreen from-[-3.65%] to-lightGreen to-100% hover:bg-darkBlue shadow-light;
+  }
+
+  .light-btn {
+    @apply rounded-full bg-lightGreen px-5 py-1 text-darkBlue shadow-light;
+  }
+
+  .border-btn-s {
+    @apply rounded-full border border-solid border-darkGreen bg-white px-5 py-1  text-darkGreen transition hover:border-darkBlue hover:bg-darkBlue hover:text-white;
+  }
+
   .main-p {
-    @apply text-sm font-light capitalize sm:text-lg md:text-xl;
+    @apply text-xs font-light capitalize sm:text-lg md:text-xl;
   }
 
   .main-heading {
-    @apply text-4xl ms:text-5xl sm:text-6xl font-light sm:leading-[90px];
+    @apply text-4xl md:text-4xl ms:text-5xl sm:text-6xl font-light sm:leading-[90px];
   }
 
   .heading-2 {
     @apply text-xl font-bold;
   }
+}
 
-  .section-title {
-    @apply flex flex-col gap-2.5 items-center relative py-10 ms:py-14 sm:py-20 font-light text-center;
+@layer utilities {
+  .text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
   }
 
-  .section-title h3 {
-    @apply relative capitalize;
+  .text-fill-unset {
+    -webkit-text-fill-color: unset;
+    text-fill-color: unset;
   }
 
-  .section-title span {
-    @apply absolute -translate-x-1/2 left-1/2 top-4 ms:top-6 sm:top-8 w-full text-5xl ms:text-7xl sm:text-8xl text-[#00263a08];
+  .preserve-3d {
+    transform-style: preserve-3d;
   }
 
-  .card-container {
-    @apply grid gap-10 ms:px-2 ms:gap-8 sm:px-8 lg:px-20;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  .preserve-3d-unset {
+    transform-style: unset;
   }
 
-  .feature-card {
-    @apply border text-center items-center flex flex-col sm:items-start sm:text-left gap-5 py-8 px-3 ms:py-12 rounded-[2.25rem] bg-white shadow-lg sm:px-8 md:px-10;
+  .\-translateZ-px {
+    transform: translateZ(-1px);
   }
+}
 
-  .globe-svg {
-    fill: #00263a;
-  }
-
-  @media (min-width: 1024px) {
-    .globe-svg {
-      fill: #137054;
-    }
-  }
+.active-header {
+  @apply bg-midGreen;
 }

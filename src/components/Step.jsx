@@ -1,9 +1,13 @@
 export default function Step({ src, alt, name, description }) {
   return (
-    <div className="flex flex-col p-8 xl:p-0 items-center gap-3 text-center border shadow-lg xl:rounded-none xl:shadow-none xl:border-none rounded-xl max-w-[15rem]">
+    <div className="flex max-w-[15rem] flex-col items-center gap-3 p-8 text-center xl:p-0">
       <img src={src} alt={alt} />
-      <h5 className="heading-2">{name}</h5>
-      <p className="main-p text-darkGreen">{description}</p>
+      <h5 className="text-xl font-bold ms:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+        {name}
+      </h5>
+      <p className="text-sm font-light capitalize text-darkGreen ms:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+        {description}
+      </p>
     </div>
   );
 }
