@@ -18,6 +18,10 @@
 }
 
 @layer components {
+  .breakable-container > *:not(.break-container) {
+    @apply w-full mx-auto ms:max-w-[400px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px];
+  }
+
   .btn {
     @apply rounded-full bg-darkGreen px-1 py-2 text-sm text-white transition duration-300 hover:bg-darkBlue ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl xl:px-12 xl:text-2xl;
   }
@@ -26,20 +30,20 @@
     @apply rounded-full border border-solid border-darkGreen bg-white px-1 py-2 text-sm text-darkGreen transition duration-300 hover:border-darkBlue hover:bg-darkBlue hover:text-white ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-10 lg:text-xl xl:px-12 xl:text-2xl;
   }
 
-  .light-gradiant-btn {
-    @apply py-1 px-4 text-darkGreen transition rounded-full font-bold bg-gradient-270 from-[#efefef] from-[-3.65%] to-lightGreen to-100% shadow-light;
+  .light-gradient-btn {
+    @apply px-1 py-2 text-darkGreen transition rounded-full font-bold bg-gradient-270 from-[#efefef] from-[-3.65%] to-lightGreen to-100% shadow-light;
   }
 
-  .dark-gradiant-btn {
+  .dark-gradient-btn {
     @apply py-1 px-4 text-white rounded-full font-bold bg-gradient-270 duration-300 transition hover:bg-blend-darken  from-darkGreen from-[-3.65%] to-lightGreen to-100% hover:bg-darkBlue shadow-light;
   }
 
   .light-btn {
-    @apply rounded-full bg-lightGreen px-5 py-1 text-darkBlue shadow-light;
+    @apply px-5 py-1 rounded-full bg-lightGreen text-darkBlue shadow-light;
   }
 
   .border-btn-s {
-    @apply rounded-full border border-solid border-darkGreen bg-white px-5 py-1  text-darkGreen transition hover:border-darkBlue hover:bg-darkBlue hover:text-white;
+    @apply px-5 py-1 transition bg-white border border-solid rounded-full border-darkGreen text-darkGreen hover:border-darkBlue hover:bg-darkBlue hover:text-white;
   }
 
   .main-p {
@@ -81,4 +85,8 @@
 
 .active-header {
   @apply bg-midGreen;
+}
+
+.active-bullet {
+  @apply bg-darkGreen;
 }

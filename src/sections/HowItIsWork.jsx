@@ -1,16 +1,15 @@
 import SectionTitle from "../components/SectionTitle";
 import Step from "../components/Step";
+import listBulletImg from "../assets/icons/list-bullet.svg";
 import registerImg from "../assets/images/register.png";
 import chooseImg from "../assets/images/choose.png";
 import payImg from "../assets/images/pay.png";
 import notificationImg from "../assets/images/notification.png";
-import Arrow from "../assets/icons/next-arrow.svg";
 import mobileMockup from "../assets/images/mobile-mockup.png";
-import listBulletImg from "../assets/icons/list-bullet.svg";
 
 export default function HowItIsWork() {
   return (
-    <section className="flex flex-col gap-12 py-10 ms:gap-16 sm:gap-16 lg:gap-0 lg:py-0">
+    <section className="flex flex-col gap-12 px-2 py-10 ms:gap-16 sm:gap-16 lg:gap-0 lg:py-0">
       <SectionTitle description="Your Path to Effortless Financial Growth">
         How it is work
       </SectionTitle>
@@ -20,39 +19,31 @@ export default function HowItIsWork() {
           description="Sign-Up easily through our website or application."
           src={registerImg}
           alt="User with green clothes and gray background"
+          arrowAfter={true}
         />
-        <img
-          src={Arrow}
-          alt="Dashed arrow going to the next step"
-          className="hidden xl:block"
-        />
+
         <Step
           name="Choose"
           description="Get your investment option from our wide range offers."
           src={chooseImg}
           alt="Hand pointing with the index finger"
+          arrowAfter={true}
         />
-        <img
-          src={Arrow}
-          alt="Dashed arrow going to the next step"
-          className="hidden xl:block"
-        />
+
         <Step
           name="Easy Pay"
           description="Flexible & convenient payments for everyone."
           src={payImg}
           alt="Green cash with some gold coins"
+          arrowAfter={true}
         />
-        <img
-          src={Arrow}
-          alt="Dashed arrow going to the next step"
-          className="hidden xl:block"
-        />
+
         <Step
           name="Own"
           description="You will get notified within 24H of New Investment."
           src={notificationImg}
           alt="Gold ring with green correct badge"
+          arrowAfter={false}
         />
       </div>
       <div className="flex flex-col lg:flex-row lg:items-center lg:pt-20">

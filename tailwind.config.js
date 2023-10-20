@@ -20,15 +20,18 @@ export default {
         ms: "400px",
       },
       backgroundImage: {
-        gradiant:
+        gradient:
           " linear-gradient(90deg,#137054 0%,#efffee80 15%,#efffee80 85%,#137054 100%)",
-        "gradiant-t-b": "linear-gradient(180deg, #00263A 0%, #137054 100%)",
+        "gradient-t-b": "linear-gradient(180deg, #00263A 0%, #137054 100%)",
         "gradient-270": "linear-gradient(270deg, var(--tw-gradient-stops))",
+        plans: "linear-gradient(32deg, #56B794 0%, #137054 100%)",
       },
       boxShadow: {
         light: "0px 15px 20px 0px rgba(0, 0, 0, 0.10) ",
         spread: "0px 15px 30px 0px rgba(0, 0, 0, 0.10)",
         features: "0px 0px 100px 0px rgba(127, 206, 122, 0.40)",
+        testimonials: "-25px 25px 100px 0px rgba(127, 206, 122, 0.50)",
+        testimonialsLg: "-100px 100px 150px 0px rgba(54, 180, 140, 0.20)",
       },
     },
   },
