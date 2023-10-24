@@ -9,7 +9,7 @@ import mobileMockup from "../assets/images/mobile-mockup.png";
 
 export default function HowItIsWork() {
   return (
-    <section className="flex flex-col gap-12 px-2 py-10 ms:gap-16 sm:gap-16 lg:gap-0 lg:py-0">
+    <section className="flex flex-col gap-12 px-2 pt-10 pb-20 ms:gap-10 sm:gap-16 lg:gap-0 lg:py-0">
       <SectionTitle description="Your Path to Effortless Financial Growth">
         How it is work
       </SectionTitle>
