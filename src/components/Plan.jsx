@@ -39,7 +39,7 @@ export default function Plan(props) {
           <li
             key={listText}
             className={
-              "flex items-center gap-3 main-p ms:gap-5 xl:gap-6 font-medium md:text-sm xl:text-xl"
+              "flex items-center gap-3 main-p ms:gap-5 xl:gap-6 font-medium md:text-sm "
             }
           >
             <img

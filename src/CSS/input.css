@@ -39,11 +39,11 @@
   }
 
   .light-btn {
-    @apply px-5 py-1 rounded-full bg-lightGreen text-darkBlue shadow-light;
+    @apply rounded-full bg-lightGreen px-5 py-1 text-darkBlue shadow-light;
   }
 
   .border-btn-s {
-    @apply px-5 py-1 transition bg-white border border-solid rounded-full border-darkGreen text-darkGreen hover:border-darkBlue hover:bg-darkBlue hover:text-white;
+    @apply rounded-full border border-solid border-darkGreen bg-white px-5 py-1 text-darkGreen transition hover:border-darkBlue hover:bg-darkBlue hover:text-white;
   }
 
   .main-p {

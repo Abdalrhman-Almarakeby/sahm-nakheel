@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import SectionTitle from "../components/SectionTitle";
 import Plan from "../components/Plan";
 import PlansNav from "../components/PlansNav";
@@ -15,29 +15,22 @@ export default function Plans() {
     navigation: true,
     loop: true,
     initialSlide: 2,
-    // autoplay: {
-    //   delay: 100,
-    //   disableOnInteraction: true,
-    // },
-    onRealIndexChange: (swiper) => seActiveBullet(swiper.realIndex),
     breakpoints: {
       640: {
-        slidesPerView: 2,
         spaceBetween: 40,
         initialSlide: 3,
       },
-      // 768: {
-      //   spaceBetween: 40,
-      //   slidesPerView: 2,
-      // },
-      // 1280: {
-      //   spaceBetween: 35,
-      //   slidesPerView: 3,
-      // },
+      768: {
+        spaceBetween: 40,
+        slidesPerView: 2,
+      },
+      1280: {
+        spaceBetween: 35,
+        slidesPerView: 3,
+        loop: false,
+      },
     },
   };
-
-  const [activeBullet, seActiveBullet] = useState(0);
 
   return (
     <div className="px-2">
@@ -45,7 +38,7 @@ export default function Plans() {
         <SectionTitle description="Your Path to Effortless Financial Growth">
           Investment Plans
         </SectionTitle>
-        <div className="items-center gap-16 lg:flex">
+        <div className="items-center gap-16 lg:flex sm:px-28 md:px-0 ">
           {/* <PlansNavBtn direction={"prev"} /> */}
           <Swiper {...swiperSettings} className="overflow-y-visible ">
             <SwiperSlide
@@ -117,7 +110,7 @@ export default function Plans() {
                 />
               }
             />
-            <PlansNav activeIndex={activeBullet} />
+            <PlansNav />
           </Swiper>
           {/* <PlansNavBtn direction={"next"} /> */}
         </div>

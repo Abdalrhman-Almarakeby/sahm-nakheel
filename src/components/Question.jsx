@@ -42,7 +42,7 @@ export default function Question({
         }}
       >
         <p
-          className="duration-400 mx-5 overflow-hidden border-l border-solid border-darkBlue px-6 text-[0.625rem] transition-all sm:text-xs lg:mx-12 lg:px-8"
+          className="duration-400 mx-5 overflow-hidden border-l border-solid border-darkBlue px-6 text-2xs transition-all sm:text-xs lg:mx-12 lg:px-8"
           style={{
             opacity: openQuestion ? 1 : 0,
             marginTop: openQuestion ? "15px" : 0,

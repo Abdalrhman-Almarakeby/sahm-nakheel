@@ -9,12 +9,16 @@ export default {
       Poppins: " 'Poppins', sans-serif",
     },
     extend: {
+      fontSize: {
+        "2xs": "0.625rem",
+      },
       colors: {
         darkGreen: "#137054",
         midGreen: "#4F9D5D",
         lightGreen: "#7FCE7A",
         darkBlue: "#00263A",
         mintyGray: "#EFFFEE",
+        darkGray: "#969696",
       },
       screens: {
         ms: "400px",
@@ -32,6 +36,9 @@ export default {
         features: "0px 0px 100px 0px rgba(127, 206, 122, 0.40)",
         testimonials: "-25px 25px 100px 0px rgba(127, 206, 122, 0.50)",
         testimonialsLg: "-100px 100px 150px 0px rgba(54, 180, 140, 0.20)",
+      },
+      borderRadius: {
+        5: "1.25rem",
       },
     },
   },

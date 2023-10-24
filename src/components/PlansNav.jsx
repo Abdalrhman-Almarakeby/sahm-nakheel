@@ -2,12 +2,8 @@ import { useSwiper } from "swiper/react";
 import next from "../assets/icons/next.svg";
 import prev from "../assets/icons/prev.svg";
 
-export default function PlansNav({ activeIndex }) {
+export default function PlansNav() {
   const swiper = useSwiper();
-
-  // // Get the Dynamic slides PerView
-  // let slides = [];
-  // for (let i = 1; i <= swiper.slides; i++) slides.push(i);
 
   return (
     <div
@@ -25,13 +21,14 @@ export default function PlansNav({ activeIndex }) {
 
       {swiper.slides.map((slides, index) => (
         <span
-          key={index}
+          key={slides.swiperSlideIndex}
           onClick={() => {
+            // FIXME: make the pagination
             if (window.innerWidth > 640) return;
-            swiper.slideTo(index);
+            swiper.slideToLoop(slides.swiperSlideIndex);
           }}
           className={`w-2 h-2 rounded-full  ${
-            activeIndex === index ? "bg-darkGreen" : "bg-[#13705426]"
+            index === 0 ? "bg-darkGreen" : "bg-[#13705426]"
           }`}
         ></span>
       ))}
