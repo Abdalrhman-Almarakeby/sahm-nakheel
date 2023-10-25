@@ -925,10 +925,6 @@ img,
   position: relative;
 }
 
-.-top-\[90\%\] {
-  top: -90%;
-}
-
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -977,20 +973,8 @@ img,
   top: 20rem;
 }
 
-.-top-full {
-  top: -100%;
-}
-
-.-top-\[130\%\] {
-  top: -130%;
-}
-
 .top-\[15\%\] {
   top: 15%;
-}
-
-.top-\[20\%\] {
-  top: 20%;
 }
 
 .-z-10 {
@@ -1082,24 +1066,16 @@ img,
   height: 1.75rem;
 }
 
+.h-\[75\%\] {
+  height: 75%;
+}
+
 .h-auto {
   height: auto;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-px {
   height: 1px;
-}
-
-.h-\[70\%\] {
-  height: 70%;
-}
-
-.h-\[75\%\] {
-  height: 75%;
 }
 
 .max-h-80 {
@@ -1108,6 +1084,10 @@ img,
 
 .min-h-\[100px\] {
   min-height: 100px;
+}
+
+.\!w-3\/4 {
+  width: 75% !important;
 }
 
 .w-11 {
@@ -1130,10 +1110,6 @@ img,
   width: 0.75rem;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -1152,10 +1128,6 @@ img,
 
 .w-full {
   width: 100%;
-}
-
-.\!w-3\/4 {
-  width: 75% !important;
 }
 
 .max-w-\[150px\] {
@@ -1180,6 +1152,10 @@ img,
 
 .max-w-\[50ch\] {
   max-width: 50ch;
+}
+
+.max-w-\[125px\] {
+  max-width: 125px;
 }
 
 .flex-shrink {
@@ -2411,6 +2387,10 @@ img,
     max-width: none;
   }
 
+  .sm\:max-w-\[35ch\] {
+    max-width: 35ch;
+  }
+
   .sm\:scale-125 {
     --tw-scale-x: 1.25;
     --tw-scale-y: 1.25;
@@ -2603,6 +2583,11 @@ img,
 
   .md\:right-12 {
     right: 3rem;
+  }
+
+  .md\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   .md\:mb-0 {
@@ -2851,6 +2836,16 @@ img,
     margin-right: 3rem;
   }
 
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .lg\:mx-48 {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -2991,12 +2986,12 @@ img,
     padding: 0px;
   }
 
-  .lg\:p-7 {
-    padding: 1.75rem;
-  }
-
   .lg\:p-6 {
     padding: 1.5rem;
+  }
+
+  .lg\:p-7 {
+    padding: 1.75rem;
   }
 
   .lg\:px-0 {
@@ -3102,6 +3097,10 @@ img,
     padding-top: 1.25rem;
   }
 
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3145,6 +3144,10 @@ img,
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .lg\:text-\[2\.625rem\] {
+    font-size: 2.625rem;
   }
 
   .lg\:font-light {
@@ -3233,12 +3236,28 @@ img,
     top: 6rem;
   }
 
-  .xl\:m-0 {
-    margin: 0px;
+  .xl\:left-\[40\%\] {
+    left: 40%;
+  }
+
+  .xl\:top-20 {
+    top: 5rem;
+  }
+
+  .xl\:top-\[70px\] {
+    top: 70px;
+  }
+
+  .xl\:left-\[50\%\] {
+    left: 50%;
   }
 
   .xl\:\!m-0 {
     margin: 0px !important;
+  }
+
+  .xl\:m-0 {
+    margin: 0px;
   }
 
   .xl\:block {
@@ -3267,6 +3286,16 @@ img,
 
   .xl\:basis-1\/2 {
     flex-basis: 50%;
+  }
+
+  .xl\:-translate-x-\[87px\] {
+    --tw-translate-x: -87px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:translate-y-\[60px\] {
+    --tw-translate-y: 60px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:grid-cols-3 {
@@ -3325,6 +3354,10 @@ img,
     gap: 2rem;
   }
 
+  .xl\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .xl\:p-0 {
     padding: 0px;
   }
@@ -3362,13 +3395,12 @@ img,
     padding-bottom: 0.625rem;
   }
 
-  .xl\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .xl\:pl-5 {
     padding-left: 1.25rem;
+  }
+
+  .xl\:pl-6 {
+    padding-left: 1.5rem;
   }
 
   .xl\:text-left {
@@ -3408,6 +3440,11 @@ img,
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .xl\:shadow-none {

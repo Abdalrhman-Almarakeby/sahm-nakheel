@@ -20,7 +20,7 @@ export default function SectionTitle({
       <span
         className={`absolute left-1/2 top-4 hidden w-full -translate-x-1/2 text-5xl text-[#00263a08] ms:top-6 ms:text-7xl sm:top-8 sm:text-8xl lg:block ${
           isContactSection
-            ? "2xl:top-0  2xl:left-0  2xl:-translate-x-[87px] 2xl:translate-y-[60px]"
+            ? "xl:top-[70px] xl:left-[50%] 2xl:top-0  2xl:left-0  2xl:-translate-x-[87px] 2xl:translate-y-[60px]"
             : ""
         }`}
       >

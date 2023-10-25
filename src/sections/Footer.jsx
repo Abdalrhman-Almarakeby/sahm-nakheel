@@ -19,7 +19,7 @@ export default function Footer() {
 
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative z-20 pt-16 break-container">
+    <footer className="break-container relative z-20 pt-16">
       <img
         src={palmTreesImgMobile}
         alt="Palm tree art"
@@ -31,7 +31,7 @@ export default function Footer() {
         className="hidden w-full md:block"
       />
       <div className="bg-darkBlue">
-        <div className="container flex flex-col gap-4 p-5 text-white rounded-t-5 ms:gap-5 ms:p-8 lg:px-12">
+        <div className="container flex flex-col gap-4 rounded-t-5 p-5 text-white ms:gap-5 ms:p-8 lg:px-12">
           <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8 lg:gap-12">
             <div className="flex flex-col gap-4">
               <img
@@ -48,21 +48,21 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-semibold md:max-w-[35ch] md:text-lg md:font-light lg:text-xl">
+              <p className="font-semibold sm:max-w-[35ch] md:text-lg md:font-light lg:text-xl">
                 Join our mailing list and get the latest ideas and news from
                 <span className="text-lightGreen"> Sahm Nakheel</span>
               </p>
               <form className="flex items-center gap-3 ms:gap-4">
                 <input
                   type="email"
-                  className="lg:text-base flex-shrink ms:flex-shrink-0  rounded-full border-none px-3 py-1 text-2xs text-darkGray placeholder:text-darkGray focus:outline-lightGreen ms:px-4 ms:text-xs sm:px-5 sm:py-1.5 md:text-sm xl:text-lg"
+                  className="max-w-[125px] flex-shrink rounded-full border-none px-3 py-1 text-2xs text-darkGray placeholder:text-darkGray focus:outline-lightGreen ms:flex-shrink-0 ms:px-4 ms:text-xs sm:max-w-none sm:px-5 sm:py-1.5 md:text-sm lg:text-base xl:text-lg"
                   placeholder="Email"
                   value={emailInput}
                   onChange={handelEmailInputChange}
                 />
                 <button
                   type="submit"
-                  className="btn whitespace-nowrap cursor-pointer border border-solid border-transparent px-2 py-1 text-2xs font-bold transition hover:border-white ms:px-5 ms:text-xs sm:px-6 sm:text-sm md:px-6 md:py-1.5 md:first-letter:text-base lg:px-8 lg:py-2 lg:text-lg xl:px-12 xl:py-2.5 xl:text-xl 2xl:text-2xl"
+                  className="btn cursor-pointer whitespace-nowrap border border-solid border-transparent px-2 py-1 text-2xs font-bold transition hover:border-white ms:px-5 ms:text-xs sm:px-6 sm:text-sm md:px-6 md:py-1.5 md:first-letter:text-base lg:px-8 lg:py-2 lg:text-lg xl:px-12 xl:py-2.5 xl:text-xl 2xl:text-2xl"
                 >
                   Join <span className="md:hidden">now</span>
                 </button>
