@@ -44,7 +44,7 @@ export default function ContactFrom() {
         id="message"
         name="message"
         placeholder="Query"
-        className="max-h-80 min-h-[100px] resize-y rounded-2xl px-4 py-2.5 text-inherit shadow-testimonials placeholder:absolute placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-inherit focus-within:outline-lightGreen focus:placeholder:invisible sm:p-4 lg:p-6 xl:shadow-none"
+        className="max-h-80 min-h-[100px] lg:min-h-[150px] lg:max-h-[500px] resize-y rounded-2xl px-4 py-2.5 text-inherit shadow-testimonials placeholder:absolute placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-inherit focus-within:outline-lightGreen focus:placeholder:invisible sm:p-4 lg:p-6 xl:shadow-none"
       />
       <div className="flex justify-between items-center px-2">
         <p className="pr-5 text-2xs text-darkBlue ms:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">

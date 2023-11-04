@@ -103,7 +103,7 @@ export default function Header() {
               <img src={userIcon} alt="User icon" />
               <a
                 href="#"
-                className="grow rounded-full border border-solid border-mintyGray px-4 py-1 text-sm ms:px-8 ms:py-2"
+                className="grow rounded-full border  border-mintyGray px-4 py-1 text-sm ms:px-8 ms:py-2"
               >
                 Log in
               </a>

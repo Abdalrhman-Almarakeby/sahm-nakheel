@@ -37,7 +37,7 @@ export default function Home() {
           <a
             href="https://www.youtube.com"
             className="border-btn xl group flex items-center justify-center gap-2 whitespace-nowrap ms:grow lg:gap-4 xl:gap-5"
-            // lg:text-2xll flex items-center justify-center gap-2 rounded-full border border-solid border-darkGreen px-2 py-1 text-center text-sm text-darkGreen sm:text-xl md:py-2 md:text-2xl lg:px-10
+            // lg:text-2xll flex items-center justify-center gap-2 rounded-full border  border-darkGreen px-2 py-1 text-center text-sm text-darkGreen sm:text-xl md:py-2 md:text-2xl lg:px-10
           >
             {/* <img src={playIcon} alt="Play video icon" className="w-3" /> */}
             <svg
@@ -61,7 +61,7 @@ export default function Home() {
       <img
         unselectable="on"
         src={shadow2}
-        className="pointer-events-none absolute left-7 top-80 -z-40 hidden blur-3xl md:block"
+        className="pointer-events-none absolute left-7 top-80 -z-40 m-0 hidden blur-3xl md:block md:max-w-[700px]"
       />
     </section>
   );

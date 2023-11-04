@@ -33,7 +33,7 @@ export default function About() {
               possibilities.
             </p>
           </div>
-          <a href="#" className="btn text-xs sm:text-base lg:text-xl">
+          <a href="#" className="btntext-xs sm:text-base lg:text-xl">
             Reserve your share now
           </a>
         </div>

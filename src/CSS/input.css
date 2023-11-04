@@ -11,9 +11,52 @@
     @apply max-w-full overflow-x-hidden font-Poppins text-darkBlue;
   }
 
+  /* Prevent the user from selecting images to prevent colors change to the images */
   img,
   svg {
     @apply select-none;
+  }
+
+  /* Remove the arrows next to number inputs */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Style the input with type Range  */
+  input[type="range"] {
+    -webkit-appearance: none;
+    @apply focus:outline-none bg-[#EFFFEE80] h-[2px];
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    @apply w-full h-[2px] cursor-pointer  rounded-full;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply h-[17px] w-[17px] rounded-full bg-white cursor-pointer -mt-[7px];
+  }
+
+  input[type="range"]::-moz-range-track {
+    @apply w-full h-[2px] cursor-pointer rounded-full;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply h-[17px] w-[17px] rounded-full bg-white cursor-pointer;
+  }
+
+  input[type="range"]::-ms-track {
+    @apply w-full h-[2px] cursor-pointer rounded-full;
+  }
+
+  input[type="range"]::-ms-thumb {
+    @apply h-[17px] w-[17px] rounded-full bg-white cursor-pointer;
   }
 }
 
@@ -24,11 +67,11 @@
   }
 
   .btn {
-    @apply rounded-full bg-darkGreen px-1 py-2 text-sm text-white transition duration-300 hover:bg-darkBlue ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl xl:px-12 xl:text-2xl;
+    @apply rounded-full bg-darkGreen px-1 py-2 text-sm text-white transition duration-300 ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl lg:hover:bg-darkBlue xl:px-12 xl:text-2xl;
   }
 
   .border-btn {
-    @apply rounded-full border border-solid border-darkGreen bg-white px-1 py-2 text-sm text-darkGreen transition duration-300 hover:border-darkBlue hover:bg-darkBlue hover:text-white ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-10 lg:text-xl xl:px-12 xl:text-2xl;
+    @apply rounded-full border border-darkGreen bg-white px-1 py-2 text-sm text-darkGreen transition duration-300 hover:border-darkBlue hover:text-white ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-10 lg:text-xl lg:hover:bg-darkBlue xl:px-12 xl:text-2xl;
   }
 
   .light-gradient-btn {
@@ -36,15 +79,15 @@
   }
 
   .dark-gradient-btn {
-    @apply py-1 px-4 text-white rounded-full font-bold bg-gradient-270 duration-300 transition hover:bg-blend-darken  from-darkGreen from-[-3.65%] to-lightGreen to-100% hover:bg-darkBlue shadow-light;
+    @apply py-1 px-4 text-white rounded-full font-bold bg-gradient-270 duration-300 transition lg:hover:bg-blend-darken  from-darkGreen from-[-3.65%] to-lightGreen to-100% lg:hover:bg-darkBlue shadow-light;
   }
 
   .light-btn {
-    @apply px-5 py-1 rounded-full bg-lightGreen text-darkBlue shadow-light;
+    @apply rounded-full bg-lightGreen px-5 py-1 text-darkBlue shadow-light;
   }
 
   .border-btn-s {
-    @apply px-5 py-1 transition bg-white border border-solid rounded-full border-darkGreen text-darkGreen hover:border-darkBlue hover:bg-darkBlue hover:text-white;
+    @apply rounded-full border border-darkGreen bg-white px-5 py-1 text-darkGreen transition hover:border-darkBlue hover:text-white lg:hover:bg-darkBlue;
   }
 
   .main-p {
@@ -90,4 +133,8 @@
 
 .active-bullet {
   @apply bg-darkGreen;
+}
+
+input[type="radio"].text-radio-btn:checked + label {
+  @apply bg-[#7fce7a] text-darkBlue font-extrabold;
 }

@@ -7,6 +7,7 @@ import Plans from "./sections/Plans";
 import FAQs from "./sections/FAQs";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
+import InvestmentCalc from "./sections/InvestmentCalc";
 import Footer from "./sections/Footer";
 import "./CSS/output.css";
 
@@ -23,6 +24,7 @@ export default function App() {
         <Plans />
         <FAQs />
         <Testimonials />
+        <InvestmentCalc />
         <Footer />
       </main>
     </div>

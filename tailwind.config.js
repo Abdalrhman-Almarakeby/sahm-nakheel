@@ -19,6 +19,7 @@ export default {
         darkBlue: "#00263A",
         mintyGray: "#EFFFEE",
         darkGray: "#969696",
+        lightGray: "#ffffff59",
       },
       screens: {
         ms: "400px",
@@ -36,9 +37,12 @@ export default {
         features: "0px 0px 100px 0px rgba(127, 206, 122, 0.40)",
         testimonials: "-25px 25px 100px 0px rgba(127, 206, 122, 0.50)",
         testimonialsLg: "-100px 100px 150px 0px rgba(54, 180, 140, 0.20)",
+        6: "0px 14px 35px 0px rgba(54, 180, 140, 0.40)",
+        7: " -75px 75px 150px 0px #137054",
       },
       borderRadius: {
-        5: "1.25rem",
+        5: "1.2rem",
+        10: "0.625rem",
       },
     },
   },

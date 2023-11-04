@@ -13,7 +13,7 @@ export default function HowItIsWork() {
       <SectionTitle description="Your Path to Effortless Financial Growth">
         How it is work
       </SectionTitle>
-      <div className="grid grid-cols-1 p-0 px-10 lg: ms:grid-cols-2 ms:justify-items-center ms:gap-0 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-0 xl:flex-nowrap xl:justify-center xl:gap-0">
+      <div className="grid justify-items-center grid-cols-1 p-0 px-10 lg: ms:grid-cols-2 ms:justify-items-center ms:gap-0 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-0 xl:flex-nowrap xl:justify-center xl:gap-0">
         <Step
           name="Register"
           description="Sign-Up easily through our website or application."
