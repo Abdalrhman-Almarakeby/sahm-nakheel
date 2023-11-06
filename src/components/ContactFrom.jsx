@@ -23,7 +23,7 @@ export default function ContactFrom() {
         autoComplete="on"
         type="text"
         placeholder="Name"
-        className="rounded-2xl px-4 py-2.5 text-inherit shadow-testimonials placeholder:text-inherit focus-within:outline-lightGreen sm:p-4 lg:p-6 xl:shadow-none"
+        className="rounded-2xl px-4 py-2.5 text-inherit shadow-4 placeholder:text-inherit focus-within:outline-lightGreen sm:p-4 lg:p-6 xl:shadow-none"
       />
       <input
         required
@@ -34,7 +34,7 @@ export default function ContactFrom() {
         name="email"
         type="email"
         placeholder="Email"
-        className="rounded-2xl px-4 py-2.5 text-inherit shadow-testimonials placeholder:text-inherit focus-within:outline-lightGreen sm:p-4 lg:p-6 xl:shadow-none"
+        className="rounded-2xl px-4 py-2.5 text-inherit shadow-4 placeholder:text-inherit focus-within:outline-lightGreen sm:p-4 lg:p-6 xl:shadow-none"
       />
       <textarea
         required
@@ -44,16 +44,16 @@ export default function ContactFrom() {
         id="message"
         name="message"
         placeholder="Query"
-        className="max-h-80 min-h-[100px] lg:min-h-[150px] lg:max-h-[500px] resize-y rounded-2xl px-4 py-2.5 text-inherit shadow-testimonials placeholder:absolute placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-inherit focus-within:outline-lightGreen focus:placeholder:invisible sm:p-4 lg:p-6 xl:shadow-none"
+        className="max-h-80 min-h-[100px] resize-y rounded-2xl px-4 py-2.5 text-inherit shadow-4 placeholder:absolute placeholder:top-1/2 placeholder:-translate-y-1/2 placeholder:text-inherit focus-within:outline-lightGreen focus:placeholder:invisible sm:p-4 lg:max-h-[500px] lg:min-h-[150px] lg:p-6 xl:shadow-none"
       />
-      <div className="flex justify-between items-center px-2">
+      <div className="flex items-center justify-between px-2">
         <p className="pr-5 text-2xs text-darkBlue ms:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
           You will receive a response within 48 hours from our team.
         </p>
         <input
           type="submit"
           value="Send Message"
-          className="px-4 py-2 text-xs cursor-pointer btn pointer ms:text-sm sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
+          className="btn pointer cursor-pointer px-4 py-2 text-xs ms:text-sm sm:text-lg md:text-lg lg:text-xl xl:text-2xl"
           disabled
         />
       </div>

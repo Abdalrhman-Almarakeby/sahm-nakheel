@@ -29,14 +29,14 @@ export default function Home() {
         <div className="mt-5 flex flex-col gap-2 ms:mt-3 ms:flex-row ms:items-center sm:px-4 md:mt-8 lg:flex-row xl:justify-center xl:gap-5">
           <a
             href="#get-started"
-            className="btn whitespace-nowrap font-bold ms:grow"
+            className="btn whitespace-nowrap px-1 py-2 text-sm font-bold ms:grow ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl xl:px-12 xl:text-2xl"
             // rounded-full bg-darkGreen px-2 py-1 text-center text-sm text-white sm:text-xl md:py-2 md:text-2xl lg:px-10 lg:text-2xl
           >
             Get started
           </a>
           <a
             href="https://www.youtube.com"
-            className="border-btn xl group flex items-center justify-center gap-2 whitespace-nowrap ms:grow lg:gap-4 xl:gap-5"
+            className="border-btn group flex items-center justify-center gap-2 whitespace-nowrap px-1 py-2 text-sm ms:grow ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:gap-4 lg:px-12 lg:text-xl xl:gap-5 xl:px-12 xl:text-2xl"
             // lg:text-2xll flex items-center justify-center gap-2 rounded-full border  border-darkGreen px-2 py-1 text-center text-sm text-darkGreen sm:text-xl md:py-2 md:text-2xl lg:px-10
           >
             {/* <img src={playIcon} alt="Play video icon" className="w-3" /> */}

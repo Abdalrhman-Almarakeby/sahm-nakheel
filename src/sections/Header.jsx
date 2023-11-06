@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`preserve-3d lg:preserve-3d-unset fixed right-0 top-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-14 text-center shadow-spread transition-[background-color] duration-200 ms:px-8 ms:pt-16 lg:static lg:w-auto lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:px-6 lg:py-10 lg:shadow-none ${
+        className={`preserve-3d lg:preserve-3d-unset fixed right-0 top-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-14 text-center shadow-2 transition-[background-color] duration-200 ms:px-8 ms:pt-16 lg:static lg:w-auto lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:px-6 lg:py-10 lg:shadow-none ${
           menuOpen ? "active-header" : ""
         }`}
       >
@@ -90,20 +90,23 @@ export default function Header() {
           </ul>
           <div className="flex flex-col items-center md:gap-6 lg:flex-row lg:gap-5 xl:gap-6">
             <a
-              className="dark-gradient-btn hidden lg:block"
+              className="dark-gradient-btn hidden px-4 py-1 lg:block"
               href="https://play.google.com"
               target="_blank"
             >
               Get app
             </a>
-            <a className="border-btn-s hidden bg-transparent lg:block" href="#">
+            <a
+              className="border-btn hidden bg-transparent px-5 py-1 text-sm lg:block"
+              href="#"
+            >
               Sign in
             </a>
             <div className="flex flex-row items-center gap-3.5 ms:mt-10 lg:hidden">
               <img src={userIcon} alt="User icon" />
               <a
                 href="#"
-                className="grow rounded-full border  border-mintyGray px-4 py-1 text-sm ms:px-8 ms:py-2"
+                className="grow rounded-full border border-mintyGray px-4 py-1 text-sm ms:px-8 ms:py-2"
               >
                 Log in
               </a>

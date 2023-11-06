@@ -3,7 +3,7 @@ import listBulletImg from "../assets/icons/list-bullet.svg";
 export default function Plan(props) {
   return (
     <div
-      className={`flex flex-col  gap-8  md:gap-10 p-6 sm:p-7 md:p-8  rounded-[35px] ${
+      className={`flex flex-col  gap-8  md:gap-10 p-6 sm:p-7 md:p-8  rounded-35 ${
         props.isMostPopular
           ? " text-white bg-plans before:absolute relative md:before:text-sm   md:before:font-semibold md:before:px-5 md:before:py-2  before:text-xs before:whitespace-nowrap before:content-['Most_popular_plan'] before:py-1 before:px-2 lg:before:py-2.5 lg:before:px-12 before:text-darkGreen before:bg-[#FFC859] before:rounded-full before:right-1/2 before:top-0  before:translate-x-1/2 before:-translate-y-1/2"
           : "bg-white"
@@ -22,7 +22,7 @@ export default function Plan(props) {
             props.isMostPopular ? "text-black" : " text-lightGreen"
           }`}
         >
-          <p className="text-lg font-medium sm:text-xl whitespace-nowrap text-lightGreen">
+          <p className="whitespace-nowrap text-lg font-medium text-lightGreen sm:text-xl">
             Medjool Trees
           </p>
           10 - Years ROI would be
@@ -69,8 +69,8 @@ export default function Plan(props) {
           href="#"
           className={`text-xs sm:px-3 md:py-2 ${
             props.isMostPopular
-              ? "light-gradient-btn"
-              : "btn md:dark-gradient-btn"
+              ? "light-gradient-btn px-1 py-2"
+              : "btn  px-1 py-2 text-sm ms:text-base md:dark-gradient-btn"
           }`}
         >
           Choose the plane

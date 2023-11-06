@@ -62,7 +62,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="btncursor-pointer whitespace-nowrap border  border-transparent px-2 py-1 text-2xs font-bold transition hover:border-white ms:px-5 ms:text-xs sm:px-6 sm:text-sm md:px-6 md:py-1.5 md:first-letter:text-base lg:px-8 lg:py-2 lg:text-lg xl:px-12 xl:py-2.5 xl:text-xl 2xl:text-2xl"
+                  className="btn cursor-pointer whitespace-nowrap border border-transparent px-2 py-1 text-2xs font-bold transition hover:border-white ms:px-5 ms:text-xs sm:px-6 sm:text-sm md:px-6 md:py-1.5 md:text-base lg:px-8 lg:py-2 lg:text-lg xl:px-12 xl:py-2.5 xl:text-xl 2xl:text-2xl"
                 >
                   Join <span className="md:hidden">now</span>
                 </button>

@@ -103,7 +103,7 @@ export default function InvestmentCalcForm(props) {
     return (
       <p
         key={key}
-        className="rounded-[10px] border border-red-600 bg-white px-4 py-3 text-sm font-bold text-red-600 sm:text-base md:text-lg xl:text-xl"
+        className="rounded-10 border border-red-600 bg-white px-4 py-3 text-sm font-bold text-red-600 sm:text-base md:text-lg xl:text-xl"
       >
         {errors[key]}
       </p>
@@ -127,7 +127,7 @@ export default function InvestmentCalcForm(props) {
             onChange={handleCalcData}
           />
           <label
-            className="inline-block cursor-pointer whitespace-nowrap rounded-[10px] bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
+            className="inline-block cursor-pointer whitespace-nowrap rounded-10 bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
             htmlFor="type-A"
           >
             Type A
@@ -143,7 +143,7 @@ export default function InvestmentCalcForm(props) {
             onChange={handleCalcData}
           />
           <label
-            className="inline-block cursor-pointer whitespace-nowrap rounded-[10px] bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
+            className="inline-block cursor-pointer whitespace-nowrap rounded-10 bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
             htmlFor="type-B"
           >
             Type B
@@ -159,7 +159,7 @@ export default function InvestmentCalcForm(props) {
             onChange={handleCalcData}
           />
           <label
-            className="inline-block cursor-pointer whitespace-nowrap rounded-[10px] bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
+            className="inline-block cursor-pointer whitespace-nowrap rounded-10 bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
             htmlFor="type-C"
           >
             Type C
@@ -175,7 +175,7 @@ export default function InvestmentCalcForm(props) {
             onChange={handleCalcData}
           />
           <label
-            className="inline-block cursor-pointer whitespace-nowrap rounded-[10px] bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
+            className="inline-block cursor-pointer whitespace-nowrap rounded-10 bg-lightGray px-2.5 py-1 text-xs font-semibold transition ms:px-3.5 ms:py-1.5 md:px-4 md:py-2 md:text-base lg:px-2.5 lg:py-1 xl:px-4 xl:py-2 xl:text-xl"
             htmlFor="type-D"
           >
             Type D
@@ -207,7 +207,7 @@ export default function InvestmentCalcForm(props) {
           // Turn tha value to String to git get rid of the leading zero
           value={Number(props.calcData.palmsNumber).toString()}
           onChange={handleCalcData}
-          className="relative w-full rounded-[10px] border border-transparent bg-lightGray px-4 py-1 font-bold outline outline-2 outline-transparent focus-within:outline-white md:text-lg lg:text-2xl xl:w-2/3 xl:text-2xl"
+          className="relative w-full rounded-10 border border-transparent bg-lightGray px-4 py-1 font-bold outline outline-2 outline-transparent focus-within:outline-white md:text-lg lg:text-2xl xl:w-2/3 xl:text-2xl"
         />
         <Range
           setCalcData={props.setCalcData}
@@ -245,7 +245,7 @@ export default function InvestmentCalcForm(props) {
           value={Number(props.calcData.yearsNumber).toString()}
           max="10"
           onChange={handleCalcData}
-          className="relative w-full rounded-[10px] border border-white bg-[#B7FFB273] px-4 py-1 font-bold outline outline-2 outline-transparent focus-within:outline-white md:text-xl lg:text-2xl xl:w-2/3"
+          className="relative w-full rounded-10 border border-white bg-[#B7FFB273] px-4 py-1 font-bold outline outline-2 outline-transparent focus-within:outline-white md:text-xl lg:text-2xl xl:w-2/3"
         />
         <Range
           setCalcData={props.setCalcData}
@@ -268,11 +268,11 @@ export default function InvestmentCalcForm(props) {
         <button
           onClick={handleSubmit}
           type="button"
-          className="btn border border-darkGreen bg-[#1370548C] text-lg font-bold shadow-6 sm:text-xl lg:absolute lg:bottom-0 lg:left-1/2 lg:z-30 lg:-translate-x-1/2 lg:translate-y-1/2 lg:bg-darkGreen lg:uppercase xl:px-12 xl:py-5 xl:text-2xl"
+          className="btn border border-darkGreen bg-[#1370548C] px-1 py-2 text-lg font-bold shadow-6 ms:text-base sm:text-xl md:px-12 md:py-2.5 md:text-2xl lg:absolute lg:bottom-0 lg:left-1/2 lg:z-30 lg:-translate-x-1/2 lg:translate-y-1/2 lg:bg-darkGreen lg:px-12 lg:text-xl lg:uppercase xl:px-12 xl:py-5 xl:text-2xl"
         >
           Calculate
         </button>
-        <div className="flex flex-col items-center justify-center gap-2.5 rounded-full border-2 border-white bg-[#b7ffb240] p-2.5 shadow-7 ms:flex-row lg:flex-grow lg:flex-col lg:items-stretch lg:rounded-[35px] lg:p-4 lg:text-center xl:mt-7">
+        <div className="flex flex-col items-center justify-center gap-2.5 rounded-full border-2 border-white bg-[#b7ffb240] p-2.5 shadow-7 ms:flex-row lg:flex-grow lg:flex-col lg:items-stretch lg:rounded-35 lg:p-4 lg:text-center xl:mt-7">
           <p className="ms:p-2.5 sm:text-xl md:text-2xl">Investor Returns</p>
           <p
             id="investmentReturns"
