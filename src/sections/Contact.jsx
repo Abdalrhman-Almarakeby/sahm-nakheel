@@ -9,7 +9,10 @@ import shadow4 from "../assets/background-shadows/shadow4.svg";
 
 export default function Contact() {
   return (
-    <section className="break-container breakable-container relative space-y-10 pb-14 xl:px-20">
+    <section
+      id="contact"
+      className="break-container breakable-container relative space-y-10 pb-14 xl:px-20"
+    >
       <SectionTitle
         children="Contact Us"
         description="Get in touch, with easy ways to reach"

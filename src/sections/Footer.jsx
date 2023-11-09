@@ -14,10 +14,10 @@ export default function Footer() {
 
   function handelEmailInputChange(e) {
     setEmailInput(e.target.value);
-    console.log(emailInput);
   }
 
   const currentYear = new Date().getFullYear();
+
   return (
     <footer className="break-container relative z-20 pt-16">
       <img
@@ -34,11 +34,9 @@ export default function Footer() {
         <div className="container flex flex-col gap-4 rounded-t-5 p-5 text-white ms:gap-5 ms:p-8 lg:px-12">
           <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8 lg:gap-12">
             <div className="flex flex-col gap-4">
-              <img
-                src={logo}
-                alt="Gray Sahm Nakheel logo"
-                className="w-24 ms:w-fit"
-              />
+              <a href="#home">
+                <img src={logo} alt="Gray Sahm Nakheel logo" />
+              </a>
               <p className="max-w-[50ch] text-xs font-light lg:max-w-[60ch] lg:text-sm xl:text-base">
                 An investment project by Palm Oases Agricultural Investment
                 designed for all types of investors. starting as low as 8000

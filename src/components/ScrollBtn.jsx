@@ -1,39 +1,23 @@
-import { useState, useEffect } from "react";
+import { useScrollBtn } from "../hooks/useScrollBtn";
 import UpArrow from "../assets/icons/up-arrow.svg";
 
 export default function ScrollBtn() {
-  const [showBtn, setShowBtn] = useState(false);
-
-  useEffect(() => {
-    function handleScrollBtnVisibility() {
-      window.pageYOffset > 300 ? setShowBtn(true) : setShowBtn(false);
-    }
-
-    window.addEventListener("scroll", handleScrollBtnVisibility);
-
-    return () =>
-      window.removeEventListener("scroll", handleScrollBtnVisibility);
-  });
-
-  const btnStyle = {
-    left: showBtn ? "auto" : -100,
-    opacity: showBtn ? 1 : 0,
-  };
-
-  function handleBtnClick() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  const { btnStyle, handleScrollToTop } = useScrollBtn();
 
   return (
     <div
-      className="fixed bottom-2 right-2 z-40 transition duration-700 md:bottom-12 md:right-12 lg:bottom-6 lg:right-6"
+      className="fixed bottom-2 right-2 z-40 transition duration-700 md:bottom-4 md:right-4 lg:bottom-4 lg:right-6"
       style={btnStyle}
     >
       <button
-        onClick={handleBtnClick}
-        className="relative rounded-full before:absolute before:left-0 before:top-0 before:-z-10 before:h-[90%] before:w-[90%] before:rounded-full before:bg-[#7fce7a40] before:transition-all lg:hover:before:-left-[40%] lg:hover:before:-top-[40%] lg:hover:before:h-[180%] lg:hover:before:w-[180%]"
+        onClick={handleScrollToTop}
+        className="relative rounded-full lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:-z-10 lg:before:h-[90%] lg:before:w-[90%] lg:before:rounded-full lg:before:bg-[#7fce7a40] lg:before:transition-all lg:hover:before:-left-[30%] lg:hover:before:-top-[30%] lg:hover:before:h-[160%] lg:hover:before:w-[160%]"
       >
-        <img src={UpArrow} alt="Up Arrow" className="w-11 lg:w-auto" />
+        <img
+          src={UpArrow}
+          alt="Up Arrow"
+          className="w-8 md:w-10 lg:w-12  xl:w-auto"
+        />
       </button>
     </div>
   );

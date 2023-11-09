@@ -6,7 +6,7 @@ export default function FAQs() {
   const [openQuestion, setOpenQuestion] = useState(null);
 
   return (
-    <section className="px-2 pt-16 space-y-12 ms:space-y-16 lg:pt-0">
+    <section id="faqs" className="px-2 pt-16 space-y-12 ms:space-y-16 lg:pt-0">
       <SectionTitle
         children={"FAQs"}
         description={"We can answer your questions any time"}

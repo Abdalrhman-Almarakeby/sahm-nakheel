@@ -1,17 +1,25 @@
 import { useSwiper } from "swiper/react";
 import next from "../assets/icons/next.svg";
 import prev from "../assets/icons/prev.svg";
+import { useState } from "react";
 
 export default function PlansNav() {
   const swiper = useSwiper();
+  // swiper.once("loopFix", () => {
+  //   document.querySelectorAll(".p").forEach((el) => {
+  //     el.classList.remove("bg-darkGreen");
+  //     if (el.getAttribute("data") == swiper.activeIndex)
+  //       el.classList.add("bg-darkGreen");
+  //   });
+  // });
 
   return (
     <div
       id="plans-nav"
-      className="flex items-center justify-center gap-5 mt-5 ms:gap-7"
+      className="mt-5 flex items-center justify-center gap-5 ms:gap-7"
     >
       <button
-        className="flex items-center justify-center w-6 h-6 rounded-full bg-lightGreen "
+        className="flex h-6 w-6 items-center justify-center rounded-full bg-lightGreen"
         onClick={() => {
           swiper.slidePrev();
         }}
@@ -22,18 +30,23 @@ export default function PlansNav() {
       {swiper.slides.map((slides, index) => (
         <span
           key={slides.swiperSlideIndex}
-          onClick={() => {
+          data={slides.swiperSlideIndex}
+          onClick={(e) => {
             // FIXME: make the pagination
-            if (window.innerWidth > 640) return;
-            swiper.slideToLoop(slides.swiperSlideIndex);
+            // if (window.innerWidth > 640) return;
+            // document.querySelectorAll(".p").forEach((e) => {
+            //   e.classList.remove("bg-darkGreen");
+            //   if (e.getAttribute("data") == swiper.realIndex)
+            //     e.classList.add("bg-darkGreen");
+            // });
+
+            swiper.slideToLoop(index);
           }}
-          className={`w-2 h-2 rounded-full  ${
-            index === 0 ? "bg-darkGreen" : "bg-[#13705426]"
-          }`}
+          className="p h-2 w-2 rounded-full bg-[#13705426]"
         ></span>
       ))}
       <button
-        className="flex items-center justify-center w-6 h-6 rounded-full bg-lightGreen "
+        className="flex h-6 w-6 items-center justify-center rounded-full bg-lightGreen"
         onClick={() => {
           swiper.slideNext();
         }}

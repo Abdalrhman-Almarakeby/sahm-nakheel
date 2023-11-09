@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useScrollDirection } from "../hooks/useScrollDirection";
 import Logo from "../assets/Logo.svg";
 import whiteLogo from "../assets/simple-logo.svg";
 import burgerIcon from "../assets/icons/mobile-menu.svg";
@@ -9,16 +10,25 @@ import shadow1 from "../assets/background-shadows/shadow1.svg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrollDirection = useScrollDirection();
 
   const navStyle = {
-    top: menuOpen ? "85%" : "-2000px",
+    top: menuOpen ? "75%" : "-2000px",
   };
+
+  useEffect(() => {
+    if (scrollDirection === "down") {
+      setMenuOpen(false);
+    }
+  });
 
   return (
     <>
       <header
-        className={`preserve-3d lg:preserve-3d-unset fixed right-0 top-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-14 text-center shadow-2 transition-[background-color] duration-200 ms:px-8 ms:pt-16 lg:static lg:w-auto lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:px-6 lg:py-10 lg:shadow-none ${
-          menuOpen ? "active-header" : ""
+        className={`preserve-3d lg:preserve-3d-unset fixed right-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-8 text-center shadow-2 transition-all duration-200 ms:px-8 ms:pt-16 lg:w-full lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:bg-white lg:px-6 lg:py-10 ${
+          menuOpen ? "!bg-midGreen" : ""
+        } ${scrollDirection === "down" ? "-top-full" : "top-0"} ${
+          window.pageYOffset > 1000 ? "lg:shadow-lg" : "lg:shadow-none"
         }`}
       >
         <img
@@ -36,57 +46,57 @@ export default function Header() {
         <nav
           id="menu"
           style={navStyle}
-          className="-translateZ-px absolute right-0 z-20 flex w-full flex-col items-center gap-4 bg-darkGreen px-0 pb-5 pt-8 text-mintyGray transition-[top] duration-300 md:gap-10 md:pt-20 md:text-lg lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:gap-8 lg:bg-inherit lg:px-0 lg:pb-0 lg:pt-5 lg:text-base lg:text-darkGreen xl:justify-between xl:px-20 2xl:justify-center 2xl:gap-32"
+          className="-translateZ-px absolute right-0 z-20 flex w-full flex-col items-center gap-4 bg-darkGreen px-0 pb-5 pt-10 text-mintyGray transition-[top] duration-300 md:gap-10 md:pt-20 md:text-lg lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:gap-8 lg:bg-inherit lg:px-0 lg:pb-0 lg:pt-5 lg:text-base lg:text-darkGreen xl:justify-between xl:px-20 2xl:justify-center 2xl:gap-32"
         >
-          <ul className="flex w-full flex-col gap-2.5 text-sm font-bold ms:gap-5 ms:text-xl md:gap-6 lg:w-auto lg:flex-row lg:gap-4 lg:text-base lg:font-normal xl:text-lg">
-            <li>
+          <ul className="flex w-full flex-col gap-3 text-sm font-bold ms:gap-5 ms:text-xl md:gap-6 lg:w-auto lg:flex-row lg:gap-4 lg:text-base lg:font-normal xl:text-lg">
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#home" className="lg:px-1 lg:py-3">
                 Home
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#about" className="lg:px-1 lg:py-3">
                 About us
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#features" className="lg:px-1 lg:py-3">
                 Features
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#pricing" className="lg:px-1 lg:py-3">
                 Pricing
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#faqs" className="lg:px-1 lg:py-3">
                 FAQs
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#gallery" className="lg:px-1 lg:py-3">
                 Gallery
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#blog" className="lg:px-1 lg:py-3">
                 Blog
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
-            <li>
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
+            <li onClick={() => setMenuOpen(false)}>
               <a href="#contact" className="lg:px-1 lg:py-3">
                 Contact us
               </a>
             </li>
-            <span className="h-0.5 w-full bg-gradient lg:hidden" />
+            <span className="hidden h-0.5 w-full bg-gradient ms:block lg:hidden" />
           </ul>
           <div className="flex flex-col items-center md:gap-6 lg:flex-row lg:gap-5 xl:gap-6">
             <a
@@ -141,7 +151,7 @@ export default function Header() {
         <img
           unselectable="on"
           src={shadow1}
-          className="pointer-events-none absolute right-7 top-5 -z-30 rotate-[-15deg] blur-3xl"
+          className="pointer-events-none absolute right-7 top-5 z-20 rotate-[-15deg] blur-3xl"
         />
       </header>
       <ScrollBtn />

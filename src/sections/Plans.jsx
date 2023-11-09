@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SectionTitle from "../components/SectionTitle";
 import Plan from "../components/Plan";
 import PlansNav from "../components/PlansNav";
-import PlansNavBtn from "../components/PlansNavBtn";
 import "swiper/css";
 
 export default function Plans() {
@@ -34,18 +32,20 @@ export default function Plans() {
 
   return (
     <div className="px-2">
-      <section className="p-6 space-y-16 ms:px-14 sm:px-4 md:px-10 bg-mintyGray rounded-3xl ">
+      <section
+        id="pricing"
+        className="space-y-16 rounded-3xl bg-mintyGray p-6 ms:px-14 sm:px-4 md:px-10"
+      >
         <SectionTitle description="Your Path to Effortless Financial Growth">
           Investment Plans
         </SectionTitle>
-        <div className="items-center gap-16 lg:flex sm:px-28 md:px-0 ">
-          {/* <PlansNavBtn direction={"prev"} /> */}
-          <Swiper {...swiperSettings} className="overflow-y-visible ">
+        <div className="items-center gap-16 sm:px-28 md:px-0 lg:flex">
+          <Swiper {...swiperSettings} className="overflow-y-visible">
             <SwiperSlide
               id="0"
               children={
                 <Plan
-                  number={10}
+                  number={0}
                   ROI={250_000}
                   price={80_000}
                   list={[
@@ -62,7 +62,7 @@ export default function Plans() {
               id="1"
               children={
                 <Plan
-                  number={5}
+                  number={1}
                   ROI={125_000}
                   price={40_000}
                   list={[
@@ -79,7 +79,7 @@ export default function Plans() {
               id="2"
               children={
                 <Plan
-                  number={1}
+                  number={2}
                   ROI={8_000}
                   price={80_000}
                   list={[
@@ -97,7 +97,7 @@ export default function Plans() {
               id="4"
               children={
                 <Plan
-                  number={5}
+                  number={3}
                   ROI={125_000}
                   price={40_000}
                   list={[
@@ -112,7 +112,6 @@ export default function Plans() {
             />
             <PlansNav />
           </Swiper>
-          {/* <PlansNavBtn direction={"next"} /> */}
         </div>
       </section>
     </div>

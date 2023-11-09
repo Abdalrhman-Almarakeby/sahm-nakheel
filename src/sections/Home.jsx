@@ -5,7 +5,7 @@ import shadow2 from "../assets/background-shadows/shadow2.svg";
 export default function Home() {
   return (
     <section
-      className="mt-36 flex flex-col-reverse items-center justify-between px-2 pb-2 ms:mt-40 lg:mt-0 lg:flex-row lg:gap-4 lg:px-5 lg:pt-16 xl:justify-center 2xl:gap-10"
+      className="mt-32 flex flex-col-reverse items-center justify-between px-2 pb-2 ms:mt-40 lg:mt-0 lg:flex-row lg:items-end lg:justify-center lg:gap-4 lg:px-5 lg:pt-[230px] xl:items-center 2xl:gap-10"
       id="home"
     >
       <div className="-mt-14 flex flex-col gap-1 p-4 text-center ms:-mt-12 ms:gap-3 sm:gap-5 sm:px-7 md:gap-7 lg:gap-9 lg:pl-0 lg:pr-0 xl:p-10 xl:pl-6">
@@ -37,9 +37,9 @@ export default function Home() {
           <a
             href="https://www.youtube.com"
             className="border-btn group flex items-center justify-center gap-2 whitespace-nowrap px-1 py-2 text-sm ms:grow ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:gap-4 lg:px-12 lg:text-xl xl:gap-5 xl:px-12 xl:text-2xl"
-            // lg:text-2xll flex items-center justify-center gap-2 rounded-full border  border-darkGreen px-2 py-1 text-center text-sm text-darkGreen sm:text-xl md:py-2 md:text-2xl lg:px-10
           >
             {/* <img src={playIcon} alt="Play video icon" className="w-3" /> */}
+            {/* FIXME: */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
@@ -56,7 +56,7 @@ export default function Home() {
       <img
         src={palmTreesImg}
         alt="Three palm trees in a field, representing nature and beauty."
-        className="px-5 ms:px-14 sm:px-28 md:px-44 lg:max-w-md lg:p-0 xl:max-w-xl 2xl:max-w-2xl"
+        className="px-5 ms:px-14 sm:px-28 md:px-44 lg:max-w-[400px] lg:p-0 xl:max-w-xl"
       />
       <img
         unselectable="on"
