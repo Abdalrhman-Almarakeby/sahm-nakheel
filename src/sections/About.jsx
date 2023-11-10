@@ -3,7 +3,7 @@ import SectionTitle from "../components/SectionTitle";
 
 export default function About() {
   return (
-    <section id="about" className="px-2 pb-10 pt-8 md:pt-16 lg:pt-0">
+    <section id="about" className="px-2">
       <img
         src={palmTreeImg}
         alt="Palm tree with green art behind"
@@ -33,7 +33,10 @@ export default function About() {
               possibilities.
             </p>
           </div>
-          <a href="#" className="btntext-xs sm:text-base lg:text-xl">
+          <a
+            href="#"
+            className="btn px-1 py-2 text-xs text-white sm:text-base md:px-12 md:py-2.5 lg:px-12 lg:text-xl lg:hover:bg-darkBlue xl:px-12 xl:text-2xl"
+          >
             Reserve your share now
           </a>
         </div>

@@ -4,7 +4,7 @@ import Testimonial from "../components/Testimonial";
 
 export default function Testimonials() {
   return (
-    <section className="space-y-14 px-6 pt-16 lg:pt-0">
+    <section className="space-y-14 px-6">
       <SectionTitle
         className="lg:hidden"
         children="What people say about Sahm Nakheel"

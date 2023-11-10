@@ -19,7 +19,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="break-container relative z-20 pt-16">
+    <footer className="break-container relative z-20">
       <img
         src={palmTreesImgMobile}
         alt="Palm tree art"

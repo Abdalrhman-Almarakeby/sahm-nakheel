@@ -11,8 +11,8 @@ export default function InvestmentCalc() {
   const [showInvestmentReturns, setShowInvestmentReturns] = useState(false);
 
   return (
-    <>
-      <section className="breakable-container break-container pt-14 sm:pt-20 lg:px-20 lg:pt-32 xl:px-24">
+    <section className="breakable-container break-container">
+      <section className="breakable-container break-container lg:px-20 xl:px-24">
         <h3 className="px-5 text-center text-3xl font-black uppercase text-darkBlue ms:text-4xl sm:text-5xl lg:text-6xl">
           Your investment <span className="text-darkGreen">calculator</span>
         </h3>
@@ -26,6 +26,6 @@ export default function InvestmentCalc() {
       </section>
       <span id="investmentReturns"></span>
       {showInvestmentReturns && <InvestmentReturnsTable calcData={calcData} />}
-    </>
+    </section>
   );
 }

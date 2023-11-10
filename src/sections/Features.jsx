@@ -14,7 +14,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative flex flex-col gap-6 px-2 pb-10 ms:gap-10 ms:pt-16 sm:gap-16 lg:gap-0 lg:py-0"
+      className="relative flex flex-col gap-6 px-2 ms:gap-10 sm:gap-16 lg:gap-0"
     >
       <SectionTitle
         description="There is no better asset to own than one that

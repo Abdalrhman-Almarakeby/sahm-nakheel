@@ -43,25 +43,33 @@ export default function InvestmentReturnsTable({ calcData }) {
   }
 
   return (
-    <section className="mt-14 overflow-x-auto px-4 lg:mt-20 lg:px-24 xl:mt-28">
-      <table className="w-full overflow-hidden rounded-t-[20px] text-center text-2xs ms:text-sm md:text-base lg:text-lg xl:text-xl">
+    <section className=" break-container sm:undo-break-container mt-14 overflow-x-auto px-4  lg:mt-20 lg:px-10 xl:mt-28">
+      <table className="w-full overflow-hidden rounded-t-[20px] text-center text-2xs ms:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
         <thead className="bg-[#EFEFEF] font-bold">
           <tr>
-            <td className="p-3 text-darkBlue ms:p-5 xl:whitespace-nowrap">
-              Years <span className="hidden md:inline-block">Number</span>
+            <td className="whitespace-nowrap p-3 text-darkBlue sm:p-5">
+              Years<>&nbsp;</>
+              <span className="hidden xl:inline-block">Number</span>
             </td>
-            <td className="p-3 text-darkGreen ms:p-5 xl:whitespace-nowrap">
-              Dates<span className="hidden md:inline-block"> Produced</span>
+            <td className="whitespace-nowrap p-3 text-darkGreen sm:p-5">
+              Dates<>&nbsp;</>
+              <span className="hidden xl:inline-block">Produced</span>
             </td>
-            <td className="p-3 text-darkGreen ms:p-5 xl:whitespace-nowrap">
-              <span className="hidden md:inline-block">Date </span>Price
+            <td className="whitespace-nowrap p-3 text-darkGreen sm:p-5">
+              <span className="hidden xl:inline-block">
+                Date<>&nbsp;</>
+              </span>
+              Price
             </td>
-            <td className="p-3 text-lightGreen ms:p-5 xl:whitespace-nowrap">
-              Off shoots
-              <span className="hidden md:inline-block"> Produced</span>
+            <td className="whitespace-nowrap p-3 text-lightGreen sm:p-5">
+              Off shoots<>&nbsp;</>
+              <span className="hidden xl:inline-block">Produced</span>
             </td>
-            <td className="p-3 text-lightGreen ms:p-5 xl:whitespace-nowrap">
-              <span className="hidden md:inline-block">Off shoots </span>Price
+            <td className="whitespace-nowrap p-3 text-lightGreen sm:p-5">
+              <span className="hidden xl:inline-block">
+                Off shoots<>&nbsp;</>
+              </span>
+              Price
             </td>
           </tr>
         </thead>
@@ -71,19 +79,19 @@ export default function InvestmentReturnsTable({ calcData }) {
               className="border-lightGreen last:border-none ms:border-b"
               key={year}
             >
-              <td className="p-3 font-semibold text-darkBlue ms:p-5">
+              <td className="p-3 font-semibold text-darkBlue sm:p-5">
                 #{year}
               </td>
-              <td className="p-3 font-semibold text-darkGreen ms:p-5 xl:whitespace-nowrap">
+              <td className="whitespace-nowrap p-3 font-semibold text-darkGreen sm:p-5">
                 {getTableData(calcData).dates} Kilos
               </td>
-              <td className="p-3 font-semibold text-darkGreen ms:p-5 xl:whitespace-nowrap">
+              <td className="whitespace-nowrap p-3 font-semibold text-darkGreen sm:p-5">
                 {getTableData(calcData).price} EGP
               </td>
-              <td className="p-3 font-semibold text-lightGreen ms:p-5">
+              <td className="p-3 font-semibold text-lightGreen sm:p-5">
                 {getTableData(calcData).offShoots}
               </td>
-              <td className="p-3 font-semibold text-lightGreen ms:p-5 xl:whitespace-nowrap">
+              <td className="whitespace-nowrap p-3 font-semibold text-lightGreen sm:p-5">
                 {getTableData(calcData).palmCost} EGP
               </td>
             </tr>

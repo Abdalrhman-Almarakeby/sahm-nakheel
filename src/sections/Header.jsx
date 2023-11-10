@@ -25,11 +25,9 @@ export default function Header() {
   return (
     <>
       <header
-        className={`preserve-3d lg:preserve-3d-unset fixed right-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-8 text-center shadow-2 transition-all duration-200 ms:px-8 ms:pt-16 lg:w-full lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:bg-white lg:px-6 lg:py-10 ${
-          menuOpen ? "!bg-midGreen" : ""
-        } ${scrollDirection === "down" ? "-top-full" : "top-0"} ${
-          window.pageYOffset > 1000 ? "lg:shadow-lg" : "lg:shadow-none"
-        }`}
+        className={`preserve-3d lg:preserve-3d-unset fixed right-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-8 text-center shadow-2 transition-all duration-300 ms:px-8 ms:pt-16 lg:w-full lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:bg-white lg:px-6 lg:py-10 
+        ${menuOpen ? "!bg-midGreen" : ""} 
+        ${scrollDirection === "down" ? "-top-full" : "top-0"} `}
       >
         <img
           src={menuOpen ? whiteLogo : Logo}

@@ -5,7 +5,7 @@ import shadow2 from "../assets/background-shadows/shadow2.svg";
 export default function Home() {
   return (
     <section
-      className="mt-32 flex flex-col-reverse items-center justify-between px-2 pb-2 ms:mt-40 lg:mt-0 lg:flex-row lg:items-end lg:justify-center lg:gap-4 lg:px-5 lg:pt-[230px] xl:items-center 2xl:gap-10"
+      className="mt-32 flex flex-col-reverse items-center justify-between px-2 ms:mt-40 lg:mt-0 lg:flex-row lg:items-end lg:justify-center lg:gap-4 lg:px-5 lg:pt-[230px] xl:items-center 2xl:gap-10"
       id="home"
     >
       <div className="-mt-14 flex flex-col gap-1 p-4 text-center ms:-mt-12 ms:gap-3 sm:gap-5 sm:px-7 md:gap-7 lg:gap-9 lg:pl-0 lg:pr-0 xl:p-10 xl:pl-6">

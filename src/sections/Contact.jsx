@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="break-container breakable-container relative space-y-10 pb-14 xl:px-20"
+      className="break-container breakable-container relative space-y-10 xl:px-20"
     >
       <SectionTitle
         children="Contact Us"

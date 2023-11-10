@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="overflow-x-hidden">
       <Header />
-      <main className="breakable-container">
+      <main className="breakable-container flex flex-col gap-20 md:gap-24">
         <Home />
         <About />
         <Features />
