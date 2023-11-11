@@ -15,7 +15,7 @@ export default function Testimonials() {
       </h3>
       <div className="space-y-5 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 md:gap-8 lg:gap-10 lg:px-10 xl:grid-cols-3 xl:gap-14 2xl:px-40">
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Abdullah Hussein"
           content="“Simple, reliable, scalable, and consistent - that’s
                   the type of investment I look for and Nakheel Valley has it all. 
@@ -24,7 +24,7 @@ export default function Testimonials() {
                   both cash and peace of mind.”"
         />
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Khaled Ahmed"
           content="“I have a dozen different investments, and with the current 
                   situation of the pandemic, agri-business model 
@@ -32,14 +32,14 @@ export default function Testimonials() {
                   stable and safe investment.”"
         />
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Ahmed Hosny"
           content="“Nakheel Valley Investment project provides an excellent 
                   choice of great returns with the least risk to be taken. I get the feeling that
                   Nakheel Valley is ahead of the game.”"
         />
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Abdullah Hussein"
           content="“Simple, reliable, scalable, and consistent - that’s
                   the type of investment I look for and Nakheel Valley has it all. 
@@ -48,7 +48,7 @@ export default function Testimonials() {
                   both cash and peace of mind.”"
         />
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Khaled Ahmed"
           content="“I have a dozen different investments, and with the current 
                   situation of the pandemic, agri-business model 
@@ -56,7 +56,7 @@ export default function Testimonials() {
                   stable and safe investment.”"
         />
         <Testimonial
-          img={userAvatar}
+          src={userAvatar}
           name="Ahmed Hosny"
           content="“Nakheel Valley Investment project provides an excellent 
                   choice of great returns with the least risk to be taken. I get the feeling that

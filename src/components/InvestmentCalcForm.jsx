@@ -2,57 +2,39 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Range from "./Range";
 
+const PALM_TYPES_RETURNS = {
+  "type-A": 250,
+  "type-B": 200,
+  "type-C": 150,
+  "type-D": 100,
+};
+
 export default function InvestmentCalcForm(props) {
   const [errors, setErrors] = useState({});
 
-  function handleCalcData(e) {
+  function handleCalcData(event) {
+    // Hide the investment returns table
     props.setShowInvestmentReturns(false);
-    props.setCalcData((prevCalcData) => {
-      return {
-        ...prevCalcData,
-        [e.target.name]: !isNaN(e.target.value)
-          ? Number(e.target.value)
-          : e.target.value,
-      };
-    });
+
+    const { name, value } = event.target;
+    const newCalcData = {
+      ...props.calcData,
+      [name]: !isNaN(value) ? Number(value) : value,
+    };
+    props.setCalcData(newCalcData);
   }
 
-  function getInvestmentReturns(calcData) {
+  function getInvestmentReturns(data) {
     // Return the prevues value if there is any errors
     const prevValue = document.getElementById("investmentReturns");
-
-    if (!(Object.keys(validateForm(calcData)).length === 0))
+    if (!(Object.keys(validateForm(data)).length === 0))
       return prevValue.innerText;
 
-    const { palmType, palmsNumber, yearsNumber } = calcData;
-
-    let palmCost;
-    let palmYearlyReturns;
-
-    // Set the cost of the palm and the yearly return on investment (Yearly ROI)
-    //  depends on the palm type
-    switch (palmType) {
-      case "type-A":
-        palmCost = 2500;
-        palmYearlyReturns = 250;
-        break;
-      case "type-B":
-        palmCost = 2000;
-        palmYearlyReturns = 200;
-        break;
-      case "type-C":
-        palmCost = 1500;
-        palmYearlyReturns = 150;
-        break;
-      case "type-D":
-        palmCost = 1000;
-        palmYearlyReturns = 100;
-        break;
-    }
-
-    const palmsYearlyReturns = palmYearlyReturns * palmsNumber;
-
-    return palmsYearlyReturns * yearsNumber;
+    // Get the total yearly returns
+    const { palmType, palmsNumber, yearsNumber } = data;
+    const yearlyReturns = PALM_TYPES_RETURNS[palmType];
+    const totalYearlyReturns = yearlyReturns * palmsNumber * yearsNumber;
+    return totalYearlyReturns;
   }
 
   function handleSubmit(e) {
@@ -62,7 +44,7 @@ export default function InvestmentCalcForm(props) {
     if (Object.keys(errors).length === 0) {
       document.getElementById("investmentReturns").scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
         inline: "nearest",
       });
       props.setShowInvestmentReturns(true);
@@ -73,30 +55,23 @@ export default function InvestmentCalcForm(props) {
   }
 
   function validateForm(data) {
-    let errors = null;
+    const errors = {};
 
-    const palmTreeTypes = ["type-A", "type-B", "type-C", "type-D"];
-    if (!palmTreeTypes.includes(data.palmType)) {
-      errors = { ...errors, palmType: "Invalid Palm Tree type" };
+    if (!PALM_TYPES_RETURNS[data.palmType]) {
+      errors.palmType = "Invalid Palm Tree type";
     }
 
-    if (!(data.palmsNumber >= 1) || !(data.palmsNumber <= 20)) {
-      errors = {
-        ...errors,
-        palmsNumber:
-          "Invalid Palms number, Palms number should be between 1 and 20",
-      };
+    if (data.palmsNumber < 1 || data.palmsNumber > 20) {
+      errors.palmsNumber =
+        "Invalid Palms number, Palms number should be between 1 and 20";
     }
 
-    if (!(data.yearsNumber >= 4) || !(data.yearsNumber <= 10)) {
-      errors = {
-        ...errors,
-        yearsNumber:
-          "Invalid Years number, Years number should be between 4 and 10",
-      };
+    if (data.yearsNumber < 4 || data.yearsNumber > 10) {
+      errors.yearsNumber =
+        "Invalid Years number, Years number should be between 4 and 10";
     }
 
-    return errors || {};
+    return errors;
   }
 
   const errorMessages = Object.keys(errors).map((key) => {
@@ -189,10 +164,9 @@ export default function InvestmentCalcForm(props) {
         >
           Number of Palms
         </label>
-        {/* <span className="relative mt-5 before:absolute before:left-1 before:top-0 before:-translate-y-[calc(100%+3px)] before:text-2xs before:capitalize before:text-lightGreen before:content-['Enter_a_number_between_1_and_20'] ms:before:text-xs lg:before:text-sm"></span> */}
         <span
           style={{ display: errors.palmsNumber ? "block" : "none" }}
-          className="-mb-8 ml-2 text-2xs capitalize text-lightGreen ms:text-xs lg:-mb-6 lg:text-sm xl:text-base"
+          className="-mb-8 ml-2 text-2xs capitalize text-red-500 pb-2 ms:text-xs lg:-mb-6 lg:text-sm xl:text-base"
         >
           Enter a number between 1 and 20
         </span>
@@ -227,10 +201,9 @@ export default function InvestmentCalcForm(props) {
         >
           Years Number
         </label>
-        {/* <span className="relative mt-5 before:absolute before:left-1 before:top-0 before:-translate-y-[calc(100%+3px)] before:text-2xs before:capitalize before:text-lightGreen before:content-['Enter_a_number_between_4_and_10'] ms:before:text-xs lg:before:text-sm"></span> */}
         <span
           style={{ display: errors.yearsNumber ? "block" : "none" }}
-          className="-mb-8 ml-2 text-2xs capitalize text-lightGreen ms:text-xs lg:-mb-6 lg:text-sm xl:text-base"
+          className="-mb-8 ml-2 text-2xs capitalize text-red-500 pb-2 ms:text-xs lg:-mb-6 lg:text-sm xl:text-base"
         >
           Enter a number between 4 and 10
         </span>

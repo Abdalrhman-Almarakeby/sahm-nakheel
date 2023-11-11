@@ -6,6 +6,7 @@ export default function Range(props) {
   for (let i = props.min; i <= props.max; i++) {
     numbers.push(i);
   }
+
   return (
     <div className="flex max-w-[500px] flex-col gap-4 px-2 text-base text-[#EFFFEE80]">
       <div className="flex justify-between">

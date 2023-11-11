@@ -1298,6 +1298,10 @@ input[type="range"]::-ms-thumb {
   gap: 0.625rem;
 }
 
+.gap-20 {
+  gap: 5rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1324,10 +1328,6 @@ input[type="range"]::-ms-thumb {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-20 {
-  gap: 5rem;
 }
 
 .gap-x-4 {
@@ -1740,6 +1740,10 @@ input[type="range"]::-ms-thumb {
   padding-top: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1908,6 +1912,16 @@ input[type="range"]::-ms-thumb {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1991,10 +2005,6 @@ input[type="range"]::-ms-thumb {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
 }
 
 .duration-300 {
@@ -2214,11 +2224,6 @@ input[type="radio"].text-radio-btn:checked + label {
   top: -20px;
 }
 
-.before\:left-1::before {
-  content: var(--tw-content);
-  left: 0.25rem;
-}
-
 .before\:left-1\/2::before {
   content: var(--tw-content);
   left: 50%;
@@ -2261,12 +2266,6 @@ input[type="radio"].text-radio-btn:checked + label {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.before\:-translate-y-\[calc\(100\%\+3px\)\]::before {
-  content: var(--tw-content);
-  --tw-translate-y: calc(calc(100% + 3px) * -1);
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .before\:translate-x-1\/2::before {
   content: var(--tw-content);
   --tw-translate-x: 50%;
@@ -2306,42 +2305,16 @@ input[type="radio"].text-radio-btn:checked + label {
   padding-bottom: 0.25rem;
 }
 
-.before\:text-2xs::before {
-  content: var(--tw-content);
-  font-size: 0.625rem;
-}
-
 .before\:text-xs::before {
   content: var(--tw-content);
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-.before\:capitalize::before {
-  content: var(--tw-content);
-  text-transform: capitalize;
-}
-
 .before\:text-darkGreen::before {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(19 112 84 / var(--tw-text-opacity));
-}
-
-.before\:text-lightGreen::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(127 206 122 / var(--tw-text-opacity));
-}
-
-.before\:content-\[\'Enter_a_number_between_1_and_20\'\]::before {
-  --tw-content: 'Enter a number between 1 and 20';
-  content: var(--tw-content);
-}
-
-.before\:content-\[\'Enter_a_number_between_4_and_10\'\]::before {
-  --tw-content: 'Enter a number between 4 and 10';
-  content: var(--tw-content);
 }
 
 .before\:content-\[\'Most_popular_plan\'\]::before {
@@ -2535,10 +2508,6 @@ input[type="radio"].text-radio-btn:checked + label {
     padding: 0.625rem;
   }
 
-  .ms\:p-5 {
-    padding: 1.25rem;
-  }
-
   .ms\:p-8 {
     padding: 2rem;
   }
@@ -2603,21 +2572,6 @@ input[type="radio"].text-radio-btn:checked + label {
     padding-bottom: 2rem;
   }
 
-  .ms\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .ms\:px-1\.5 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-
-  .ms\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .ms\:pt-16 {
     padding-top: 4rem;
   }
@@ -2672,12 +2626,6 @@ input[type="radio"].text-radio-btn:checked + label {
   }
 
   .ms\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  .ms\:before\:text-xs::before {
-    content: var(--tw-content);
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -2797,12 +2745,12 @@ input[type="radio"].text-radio-btn:checked + label {
     padding: 1rem;
   }
 
-  .sm\:p-7 {
-    padding: 1.75rem;
-  }
-
   .sm\:p-5 {
     padding: 1.25rem;
+  }
+
+  .sm\:p-7 {
+    padding: 1.75rem;
   }
 
   .sm\:px-20 {
@@ -2992,6 +2940,10 @@ input[type="radio"].text-radio-btn:checked + label {
     gap: 5rem;
   }
 
+  .md\:gap-24 {
+    gap: 6rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -3014,10 +2966,6 @@ input[type="radio"].text-radio-btn:checked + label {
 
   .md\:gap-9 {
     gap: 2.25rem;
-  }
-
-  .md\:gap-24 {
-    gap: 6rem;
   }
 
   .md\:p-6 {
@@ -3206,6 +3154,10 @@ input[type="radio"].text-radio-btn:checked + label {
 
   .lg\:right-6 {
     right: 1.5rem;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
   }
 
   .lg\:top-\[360px\] {
@@ -3738,12 +3690,6 @@ input[type="radio"].text-radio-btn:checked + label {
     padding-bottom: 0.625rem;
   }
 
-  .lg\:before\:text-sm::before {
-    content: var(--tw-content);
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
   .lg\:before\:transition-all::before {
     content: var(--tw-content);
     transition-property: all;
@@ -3916,10 +3862,6 @@ input[type="radio"].text-radio-btn:checked + label {
 
   .xl\:gap-8 {
     gap: 2rem;
-  }
-
-  .xl\:gap-28 {
-    gap: 7rem;
   }
 
   .xl\:gap-y-12 {

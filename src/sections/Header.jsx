@@ -10,6 +10,7 @@ import shadow1 from "../assets/background-shadows/shadow1.svg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pageScroll, setPageScroll] = useState(window.pageYOffset);
   const scrollDirection = useScrollDirection();
 
   const navStyle = {
@@ -20,14 +21,19 @@ export default function Header() {
     if (scrollDirection === "down") {
       setMenuOpen(false);
     }
+
+    window.addEventListener("scroll", () => {
+      setPageScroll(window.pageYOffset);
+    });
   });
 
   return (
     <>
       <header
-        className={`preserve-3d lg:preserve-3d-unset fixed right-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-8 text-center shadow-2 transition-all duration-300 ms:px-8 ms:pt-16 lg:w-full lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:bg-white lg:px-6 lg:py-10 
+        className={`preserve-3d lg:preserve-3d-unset fixed right-0 z-50 flex w-full flex-row items-center justify-between gap-5 rounded-b-3xl bg-[#efffeec7] px-5 pb-4 pt-8 text-center shadow-2 transition-all duration-300 ms:px-8 ms:pt-16 lg:w-full lg:flex-col lg:items-stretch lg:justify-start lg:bg-inherit lg:bg-white lg:absolute lg:top-0 lg:shadow-none lg:px-6 lg:py-10 
         ${menuOpen ? "!bg-midGreen" : ""} 
-        ${scrollDirection === "down" ? "-top-full" : "top-0"} `}
+        ${scrollDirection === "down" ? "-top-full" : "top-0"}
+        `}
       >
         <img
           src={menuOpen ? whiteLogo : Logo}
@@ -120,7 +126,7 @@ export default function Header() {
               </a>
             </div>
             <p className="pb-4 pt-3 lg:hidden">
-              New here ?{" "}
+              New here ?<>&nbsp;</>
               <a
                 href="#"
                 className="whitespace-nowrap text-lightGreen underline"
@@ -130,7 +136,6 @@ export default function Header() {
             </p>
             <div className="text-mintyGray lg:text-darkGreen">
               <button className="flex items-center gap-1 px-2 py-1 lg:gap-3 lg:px-0">
-                {/* FIXME: replace the svg with an img and use stroke and fill to change the color */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="9"

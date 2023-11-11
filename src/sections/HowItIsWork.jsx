@@ -14,7 +14,7 @@ export default function HowItIsWork() {
         How it is work
       </SectionTitle>
       <div className="flex flex-col gap-16 md:gap-20 xl:gap-24">
-        {" "}
+        <>&nbsp;</>
         <div className="lg: grid grid-cols-1 justify-items-center p-0 px-10 ms:grid-cols-2 ms:justify-items-center ms:gap-0 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-0 xl:flex-nowrap xl:justify-center xl:gap-0">
           <Step
             name="Register"
@@ -56,7 +56,7 @@ export default function HowItIsWork() {
           />
           <div className="ms:10 flex flex-col gap-14 px-6 sm:gap-16 lg:gap-8 lg:px-0">
             <h2 className="main-heading text-center text-3xl ms:text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:pl-5 xl:text-left xl:text-6xl">
-              Download Our Mobile App{" "}
+              Download Our Mobile App<>&nbsp;</>
               <span className="font-extrabold text-darkGreen xl:text-7xl">
                 Now!
               </span>

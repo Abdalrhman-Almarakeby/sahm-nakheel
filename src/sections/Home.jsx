@@ -1,4 +1,3 @@
-import playIcon from "../assets/icons/play.svg";
 import palmTreesImg from "../assets/images/Image-1.png";
 import shadow2 from "../assets/background-shadows/shadow2.svg";
 
@@ -15,10 +14,10 @@ export default function Home() {
         <h1 className="text-2xl font-light leading-relaxed ms:text-3xl sm:text-5xl sm:leading-snug lg:text-[2.625rem] xl:text-5xl">
           Affordable investment <br />
           <span className="font-extrabold sm:whitespace-nowrap">
-            {" "}
+            <>&nbsp;</>
             Starting from
             <span className="whitespace-nowrap font-extrabold text-darkGreen">
-              {" "}
+              <>&nbsp;</>
               8000 EGP
             </span>
           </span>
@@ -30,7 +29,6 @@ export default function Home() {
           <a
             href="#get-started"
             className="btn whitespace-nowrap px-1 py-2 text-sm font-bold ms:grow ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:px-12 lg:text-xl xl:px-12 xl:text-2xl"
-            // rounded-full bg-darkGreen px-2 py-1 text-center text-sm text-white sm:text-xl md:py-2 md:text-2xl lg:px-10 lg:text-2xl
           >
             Get started
           </a>
@@ -38,8 +36,6 @@ export default function Home() {
             href="https://www.youtube.com"
             className="border-btn group flex items-center justify-center gap-2 whitespace-nowrap px-1 py-2 text-sm ms:grow ms:text-base md:px-12 md:py-2.5 md:text-2xl lg:gap-4 lg:px-12 lg:text-xl xl:gap-5 xl:px-12 xl:text-2xl"
           >
-            {/* <img src={playIcon} alt="Play video icon" className="w-3" /> */}
-            {/* FIXME: */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"

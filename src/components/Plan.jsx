@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import listBulletImg from "../assets/icons/list-bullet.svg";
 
 export default function Plan(props) {
@@ -58,7 +59,8 @@ export default function Plan(props) {
             props.isMostPopular ? "text-white" : "text-darkGreen"
           }`}
         >
-          {props.price}{" "}
+          {props.price}
+          <>&nbsp;</>
           <span
             className={props.isMostPopular ? "text-white" : "text-lightGreen"}
           >
@@ -79,3 +81,11 @@ export default function Plan(props) {
     </div>
   );
 }
+
+Plan.propTypes = {
+  isMostPopular: PropTypes.bool,
+  number: PropTypes.number.isRequired,
+  ROI: PropTypes.number.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string),
+  price: PropTypes.number.isRequired,
+};
