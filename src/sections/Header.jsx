@@ -50,7 +50,7 @@ export default function Header() {
         <nav
           id="menu"
           style={navStyle}
-          className="-translateZ-px absolute right-0 z-20 flex w-full flex-col items-center gap-4 bg-darkGreen px-0 pb-5 pt-10 text-mintyGray transition-[top] duration-300 md:gap-10 md:pt-20 md:text-lg lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:gap-8 lg:bg-inherit lg:px-0 lg:pb-0 lg:pt-5 lg:text-base lg:text-darkGreen xl:justify-between xl:px-20 2xl:justify-center 2xl:gap-32"
+          className="-translateZ-px absolute right-0 z-20 flex h-screen w-full flex-col items-center gap-4 bg-darkGreen px-0 pb-5 pt-10 text-mintyGray transition-[top] duration-300 md:gap-10 md:pt-20 md:text-lg lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:gap-8 lg:bg-inherit lg:px-0 lg:pb-0 lg:pt-5 lg:text-base lg:text-darkGreen xl:justify-between xl:px-20 2xl:justify-center 2xl:gap-32"
         >
           <ul className="flex w-full flex-col gap-3 text-sm font-bold ms:gap-5 ms:text-xl md:gap-6 lg:w-auto lg:flex-row lg:gap-4 lg:text-base lg:font-normal xl:text-lg">
             <li onClick={() => setMenuOpen(false)}>

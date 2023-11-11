@@ -1111,6 +1111,10 @@ input[type="range"]::-ms-thumb {
   height: 1px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .max-h-80 {
   max-height: 20rem;
 }
@@ -1716,6 +1720,10 @@ input[type="range"]::-ms-thumb {
   padding-bottom: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1738,10 +1746,6 @@ input[type="range"]::-ms-thumb {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .text-left {
@@ -1902,6 +1906,11 @@ input[type="range"]::-ms-thumb {
   color: rgb(239 255 238 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -1910,16 +1919,6 @@ input[type="range"]::-ms-thumb {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline {

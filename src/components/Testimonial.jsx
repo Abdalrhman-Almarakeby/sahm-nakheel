@@ -16,7 +16,7 @@ export default function Testimonial(props) {
   );
 }
 
-Testimonial.PropTypes = {
+Testimonial.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
